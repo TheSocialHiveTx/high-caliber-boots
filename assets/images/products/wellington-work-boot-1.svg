@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Ironwood Pull-On Heavy Work Boot">
+  <defs>
+    <radialGradient id="bg_wellington-work-boot1" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1f1d1b" />
+      <stop offset="70%" stop-color="#121110" />
+      <stop offset="100%" stop-color="#080706" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg_wellington-work-boot1)" />
+  <ellipse cx="250" cy="420" rx="190" ry="20" fill="#000000" opacity="0.9" />
+  <g transform="translate(60, 60)">
+    <!-- Upper -->
+    <path d="M120,40 C140,30 200,30 220,40 L230,220 L105,230 Z" fill="#33241b" stroke="#806247" stroke-width="1.5" />
+    <path d="M110,35 Q170,25 230,35 L230,60 Q170,50 110,60 Z" fill="#111111" />
+    <!-- Laces / Pull Straps -->
+    <g fill="#C7A477">
+      <circle cx="160" cy="85" r="3" /><circle cx="185" cy="80" r="3" />
+      <circle cx="162" cy="115" r="3" /><circle cx="187" cy="110" r="3" />
+      <circle cx="164" cy="145" r="3" /><circle cx="189" cy="140" r="3" />
+      <line x1="160" y1="85" x2="187" y2="110" stroke="#C7A477" stroke-width="1.8" />
+      <line x1="185" y1="80" x2="162" y2="115" stroke="#C7A477" stroke-width="1.8" />
+      <line x1="162" y1="115" x2="189" y2="140" stroke="#C7A477" stroke-width="1.8" />
+    </g>
+    <!-- Vamp & Safety Cap -->
+    <path d="M105,230 L230,220 C270,240 320,270 355,310 C365,325 360,340 345,345 L75,345 L70,285 Z" fill="#453124" stroke="#806247" stroke-width="1.5" />
+    <path d="M280,285 C320,300 355,315 350,340 L250,340 Z" fill="#593f2f" stroke="#806247" stroke-width="1.2" />
+    <!-- Lug Sole -->
+    <path d="M65,345 L355,345 L350,380 L60,380 Z" fill="#141414" stroke="#444" stroke-width="1.5" />
+    <line x1="75" y1="350" x2="345" y2="350" stroke="#C7A477" stroke-width="1.5" stroke-dasharray="3 3" />
+  </g>
+</svg>

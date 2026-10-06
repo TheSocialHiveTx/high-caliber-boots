@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Black Shrunken Bison Roughout Boot Detail">
+  <defs>
+    <radialGradient id="bg_bison-roughout-black2" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#221c17" />
+      <stop offset="70%" stop-color="#13100e" />
+      <stop offset="100%" stop-color="#080706" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg_bison-roughout-black2)" />
+  <ellipse cx="250" cy="420" rx="160" ry="18" fill="#000000" opacity="0.85" />
+  <g transform="translate(100, 60)">
+    <!-- Macro texture / sole / stitching view -->
+    <circle cx="150" cy="180" r="140" fill="#151515" stroke="#555555" stroke-width="2" />
+    <circle cx="150" cy="180" r="120" fill="#222222" stroke="#555555" stroke-width="1.5" />
+    <!-- Western brand stamp / detail badge -->
+    <polygon points="150,130 165,165 200,180 165,195 150,230 135,195 100,180 135,165" fill="#C7A477" />
+    <circle cx="150" cy="180" r="6" fill="#181716" />
+    <text x="150" y="270" text-anchor="middle" font-family="'Cinzel', serif" font-size="12" font-weight="700" letter-spacing="2" fill="#C7A477">HIGH CALIBER</text>
+  </g>
+</svg>

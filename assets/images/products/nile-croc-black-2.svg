@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Nile Crocodile Roper Boot Sole and Heel">
+  <defs>
+    <radialGradient id="nileBg2" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#19191a" />
+      <stop offset="70%" stop-color="#111112" />
+      <stop offset="100%" stop-color="#080809" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#nileBg2)" />
+  <ellipse cx="250" cy="430" rx="160" ry="18" fill="#000000" opacity="0.85" />
+  <!-- Underneath Outsole with Lemonwood Peg pattern -->
+  <g transform="translate(130, 40)">
+    <path d="M120,40 C170,40 210,90 210,180 C210,250 180,310 160,370 L80,370 C60,310 30,250 30,180 C30,90 70,40 120,40 Z" fill="#2d1c13" stroke="#806247" stroke-width="2" />
+    <!-- High Caliber Monogram Stamped on Sole -->
+    <circle cx="120" cy="180" r="30" fill="#1f140e" stroke="#C7A477" stroke-width="1.5" />
+    <text x="120" y="185" text-anchor="middle" font-family="'Cinzel', serif" font-size="14" font-weight="700" fill="#C7A477">HC</text>
+    <!-- Lemonwood Pegging Rows (Double row of brass and wood pegs) -->
+    <g fill="#F1EDE6" stroke="#C7A477" stroke-width="0.5">
+      <circle cx="70" cy="270" r="2.5" /><circle cx="78" cy="270" r="2.5" />
+      <circle cx="68" cy="290" r="2.5" /><circle cx="76" cy="290" r="2.5" />
+      <circle cx="66" cy="310" r="2.5" /><circle cx="74" cy="310" r="2.5" />
+      <circle cx="170" cy="270" r="2.5" /><circle cx="162" cy="270" r="2.5" />
+      <circle cx="172" cy="290" r="2.5" /><circle cx="164" cy="290" r="2.5" />
+      <circle cx="174" cy="310" r="2.5" /><circle cx="166" cy="310" r="2.5" />
+    </g>
+    <!-- Stacked Leather Heel Bottom with Rubber Top Lift -->
+    <rect x="60" y="370" width="120" height="60" rx="8" fill="#141416" stroke="#444" stroke-width="1.5" />
+    <path d="M60,405 L180,405 L180,430 L60,430 Z" fill="#090909" />
+    <!-- Brass nails on heel rim -->
+    <g fill="#C7A477">
+      <circle cx="70" cy="380" r="2" /><circle cx="90" cy="380" r="2" />
+      <circle cx="150" cy="380" r="2" /><circle cx="170" cy="380" r="2" />
+      <circle cx="70" cy="420" r="2" /><circle cx="170" cy="420" r="2" />
+    </g>
+  </g>
+</svg>

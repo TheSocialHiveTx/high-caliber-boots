@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="100%" height="100%" fill="none" role="img" aria-label="Workwear That Shows Up - FR Clothing">
+  <defs>
+    <radialGradient id="frSplitBg" cx="40%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#281d18" />
+      <stop offset="60%" stop-color="#14110f" />
+      <stop offset="100%" stop-color="#0a0807" />
+    </radialGradient>
+  </defs>
+
+  <rect width="700" height="500" fill="url(#frSplitBg)" />
+
+  <!-- Heavy FR Canvas Jacket Display -->
+  <g transform="translate(180, 50)">
+    <ellipse cx="170" cy="380" rx="180" ry="20" fill="#000000" opacity="0.85" />
+
+    <!-- Jacket Body -->
+    <path d="M70,80 L130,30 L210,30 L270,80 L310,180 L275,200 L245,150 L250,340 L90,340 L95,150 L65,200 L30,180 Z" fill="#3d2e22" stroke="#806247" stroke-width="1.8" />
+    
+    <!-- Corduroy collar -->
+    <polygon points="130,30 170,70 140,90 105,45" fill="#1b140e" stroke="#806247" stroke-width="1" />
+    <polygon points="210,30 170,70 200,90 235,45" fill="#1b140e" stroke="#806247" stroke-width="1" />
+
+    <!-- Zipper placket -->
+    <rect x="160" y="65" width="20" height="275" fill="#2d2016" stroke="#806247" stroke-width="1" />
+    <line x1="170" y1="70" x2="170" y2="335" stroke="#C7A477" stroke-width="2" stroke-dasharray="3 2" />
+
+    <!-- FR CAT 2 Badge Shield -->
+    <g transform="translate(110, 115)">
+      <polygon points="9,0 18,4 18,15 9,20 0,15 0,4" fill="#A54B25" stroke="#C7A477" stroke-width="0.8" />
+      <text x="9" y="13" text-anchor="middle" font-family="sans-serif" font-size="6.5" font-weight="900" fill="#F1EDE6">FR</text>
+    </g>
+
+    <!-- Slash Pockets -->
+    <path d="M100,210 L140,210 L130,280 L100,280 Z" fill="#241a12" stroke="#806247" stroke-width="1" />
+    <path d="M240,210 L200,210 L210,280 L240,280 Z" fill="#241a12" stroke="#806247" stroke-width="1" />
+
+    <!-- Seam details -->
+    <line x1="90" y1="330" x2="250" y2="330" stroke="#C7A477" stroke-width="1.2" stroke-dasharray="3 3" />
+  </g>
+</svg>

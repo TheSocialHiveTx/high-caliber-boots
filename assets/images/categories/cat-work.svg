@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" fill="none" role="img" aria-label="Work and Steel Toe Boots Collection">
+  <defs>
+    <radialGradient id="workBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1f1e1c" />
+      <stop offset="60%" stop-color="#131312" />
+      <stop offset="100%" stop-color="#090909" />
+    </radialGradient>
+    <linearGradient id="steelCapGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#55514c" />
+      <stop offset="50%" stop-color="#806247" />
+      <stop offset="100%" stop-color="#3d3a36" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#workBg)" />
+
+  <!-- Industrial steel diamond plate subtle texture in background -->
+  <g opacity="0.12" stroke="#ffffff" stroke-width="1.2">
+    <path d="M50,80 L70,90 M60,75 L80,85" />
+    <path d="M150,110 L170,120 M160,105 L180,115" />
+    <path d="M350,90 L370,100 M360,85 L380,95" />
+    <path d="M480,130 L500,140 M490,125 L510,135" />
+    <path d="M100,240 L120,250 M110,235 L130,245" />
+    <path d="M450,260 L470,270 M460,255 L480,265" />
+  </g>
+
+  <!-- Heavy Duty Lace-up Work Boot & Safety Toe Silhouette -->
+  <g transform="translate(100, 150)">
+    <!-- Shadow -->
+    <ellipse cx="200" cy="450" rx="210" ry="26" fill="#000000" opacity="0.9" />
+
+    <!-- Padded Collar & Leather Upper -->
+    <path d="M120,40 C140,30 200,30 220,40 L230,240 L105,250 Z" fill="#241e19" stroke="#50453b" stroke-width="1.5" />
+    <!-- Padded black collar -->
+    <path d="M110,35 Q170,25 230,35 L230,65 Q170,55 110,65 Z" fill="#111111" stroke="#333333" stroke-width="1" />
+    
+    <!-- Heavy Brass Eyelets & Kevlar Lacing -->
+    <g fill="#C7A477" stroke="#806247" stroke-width="0.8">
+      <circle cx="160" cy="90" r="3.5" /><circle cx="185" cy="85" r="3.5" />
+      <circle cx="162" cy="120" r="3.5" /><circle cx="187" cy="115" r="3.5" />
+      <circle cx="164" cy="150" r="3.5" /><circle cx="189" cy="145" r="3.5" />
+      <circle cx="166" cy="180" r="3.5" /><circle cx="191" cy="175" r="3.5" />
+      <circle cx="168" cy="210" r="3.5" /><circle cx="193" cy="205" r="3.5" />
+      <!-- Crossed boot laces -->
+      <line x1="160" y1="90" x2="187" y2="115" stroke="#C7A477" stroke-width="2" />
+      <line x1="185" y1="85" x2="162" y2="120" stroke="#C7A477" stroke-width="2" />
+      <line x1="162" y1="120" x2="189" y2="145" stroke="#C7A477" stroke-width="2" />
+      <line x1="187" y1="115" x2="164" y2="150" stroke="#C7A477" stroke-width="2" />
+      <line x1="164" y1="150" x2="191" y2="175" stroke="#C7A477" stroke-width="2" />
+      <line x1="189" y1="145" x2="166" y2="180" stroke="#C7A477" stroke-width="2" />
+    </g>
+
+    <!-- Waterproof Leather Vamp & External Scuff Guard Toe -->
+    <path d="M105,250 L230,240 C280,265 330,300 370,345 C385,365 385,385 370,395 L75,395 L70,320 Z" fill="#2d251f" stroke="#806247" stroke-width="1.5" />
+    
+    <!-- Molded Composite/Steel Safety Toe Cap -->
+    <path d="M290,320 C340,335 375,355 372,390 L260,390 Z" fill="url(#steelCapGrad)" stroke="#A54B25" stroke-width="1.5" opacity="0.9" />
+
+    <!-- Heavy Lug Vibram Outsole with oil/slip resistant deep treads -->
+    <path d="M65,395 L375,395 L370,435 L60,435 Z" fill="#141414" stroke="#444444" stroke-width="1.5" />
+    <!-- Aggressive lug teeth pattern -->
+    <g fill="#090909" stroke="#222222">
+      <rect x="70" y="420" width="25" height="18" rx="2" />
+      <rect x="110" y="420" width="25" height="18" rx="2" />
+      <rect x="150" y="420" width="25" height="18" rx="2" />
+      <rect x="230" y="420" width="25" height="18" rx="2" />
+      <rect x="270" y="420" width="25" height="18" rx="2" />
+      <rect x="310" y="420" width="25" height="18" rx="2" />
+      <rect x="345" y="420" width="20" height="18" rx="2" />
+    </g>
+    <!-- Reinforced Storm Welt with double Kevlar stitching -->
+    <line x1="75" y1="400" x2="368" y2="400" stroke="#C7A477" stroke-width="2" stroke-dasharray="3 3" />
+  </g>
+
+  <!-- Tag -->
+  <g transform="translate(40, 610)">
+    <rect width="190" height="34" rx="2" fill="#181716" stroke="#806247" stroke-width="1" />
+    <text x="95" y="22" text-anchor="middle" font-family="'Cinzel', serif" font-size="12" font-weight="700" letter-spacing="2" fill="#C7A477">STEEL &amp; COMPOSITE</text>
+  </g>
+</svg>

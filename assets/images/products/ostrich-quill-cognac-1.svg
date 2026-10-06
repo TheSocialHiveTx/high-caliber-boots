@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Full Quill Ostrich Boot Profile">
+  <defs>
+    <radialGradient id="ostBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#2a1d15" />
+      <stop offset="70%" stop-color="#18110c" />
+      <stop offset="100%" stop-color="#0a0806" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#ostBg)" />
+  <ellipse cx="250" cy="420" rx="190" ry="20" fill="#000000" opacity="0.85" />
+  <g transform="translate(60, 40)">
+    <!-- Shaft (Cognac / Tan) -->
+    <path d="M120,40 C140,25 240,25 260,40 L275,280 L110,290 Z" fill="#3d2417" stroke="#806247" stroke-width="1.8" />
+    <path d="M140,70 Q190,160 145,240" stroke="#C7A477" stroke-width="1.5" fill="none" />
+    <path d="M240,70 Q190,160 235,240" stroke="#C7A477" stroke-width="1.5" fill="none" />
+    <!-- Vamp (Full Quill Ostrich with quill bumps) -->
+    <path d="M110,290 L275,280 C320,305 375,335 405,370 C410,378 405,388 390,390 L80,390 L75,340 Z" fill="#663c24" stroke="#806247" stroke-width="1.5" />
+    <!-- Ostrich Quill follicles (distinct raised bumps) -->
+    <g fill="#452715" stroke="#C7A477" stroke-width="0.8">
+      <circle cx="160" cy="320" r="4" /><circle cx="200" cy="315" r="4" /><circle cx="240" cy="310" r="4" />
+      <circle cx="140" cy="350" r="4" /><circle cx="180" cy="345" r="4" /><circle cx="220" cy="340" r="4" />
+      <circle cx="260" cy="335" r="4" /><circle cx="300" cy="340" r="4" />
+      <circle cx="200" cy="370" r="4" /><circle cx="240" cy="365" r="4" /><circle cx="280" cy="365" r="4" />
+      <circle cx="320" cy="365" r="4" /><circle cx="360" cy="370" r="4" />
+    </g>
+    <!-- Heel & Sole -->
+    <path d="M80,390 L70,435 L125,435 L135,390 Z" fill="#14100d" stroke="#806247" stroke-width="1" />
+    <path d="M75,390 L395,388 L395,402 L75,404 Z" fill="#362417" stroke="#C7A477" stroke-width="1" />
+  </g>
+</svg>

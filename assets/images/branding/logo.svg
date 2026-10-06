@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 70" width="100%" height="100%" fill="none" role="img" aria-label="High Caliber Boots Logo">
+  <defs>
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1EDE6" />
+      <stop offset="35%" stop-color="#C7A477" />
+      <stop offset="70%" stop-color="#806247" />
+      <stop offset="100%" stop-color="#9A542E" />
+    </linearGradient>
+    <linearGradient id="steelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C7A477" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#806247" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#211A15" stop-opacity="0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- Monogram Crest on the left -->
+  <g transform="translate(4, 3)">
+    <!-- Outer Shield / Diamond Frame -->
+    <path d="M32 0 L64 32 L32 64 L0 32 Z" fill="#111111" stroke="url(#bronzeGrad)" stroke-width="1.75" />
+    <path d="M32 6 L58 32 L32 58 L6 32 Z" fill="#181716" stroke="rgba(199, 164, 119, 0.3)" stroke-width="1" />
+    
+    <!-- Intricate H & C Interlock -->
+    <!-- 'H' -->
+    <path d="M19 19 L25 19 L25 28 L39 28 L39 19 L45 19 L45 45 L39 45 L39 34 L25 34 L25 45 L19 45 Z" fill="url(#bronzeGrad)" />
+    <!-- 'C' overlay with Western spur -->
+    <path d="M37 22 C30 22 24 26 24 32 C24 38 30 42 37 42 L38 38 C33 38 29 36 29 32 C29 28 33 26 38 26 Z" fill="#F1EDE6" />
+    <!-- Center spur star -->
+    <circle cx="32" cy="32" r="1.5" fill="#C7A477" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(80, 0)">
+    <!-- Main Wordmark: HIGH CALIBER -->
+    <text x="0" y="38" font-family="'Cinzel', 'Times New Roman', Georgia, serif" font-size="28" font-weight="700" letter-spacing="4.5" fill="url(#bronzeGrad)">
+      HIGH CALIBER
+    </text>
+    
+    <!-- Subtitle with ornament rules -->
+    <path d="M0 48 L72 48 M212 48 L284 48" stroke="rgba(199, 164, 119, 0.4)" stroke-width="1" />
+    <polygon points="77,48 80,45 83,48 80,51" fill="#C7A477" />
+    <polygon points="201,48 204,45 207,48 204,51" fill="#C7A477" />
+    
+    <text x="142" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="7.5" font-weight="600" letter-spacing="3" fill="#A9A39A">
+      BOOTS &amp; WESTERN OUTFITTERS
+    </text>
+  </g>
+</svg>

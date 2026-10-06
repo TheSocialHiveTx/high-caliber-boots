@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" fill="none" role="img" aria-label="Exotic Boots Collection">
+  <defs>
+    <radialGradient id="exoticBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#261c16" />
+      <stop offset="60%" stop-color="#14110f" />
+      <stop offset="100%" stop-color="#0a0908" />
+    </radialGradient>
+    <linearGradient id="caimanSheen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C7A477" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#806247" stop-opacity="0.1" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#exoticBg)" />
+
+  <!-- Geometric Caiman Belly Grid Overlay -->
+  <g opacity="0.25">
+    <g transform="translate(50, 80)">
+      <rect x="0" y="0" width="70" height="50" rx="6" fill="#38291e" stroke="#1d1612" stroke-width="2" />
+      <rect x="80" y="0" width="90" height="50" rx="6" fill="#31241a" stroke="#1d1612" stroke-width="2" />
+      <rect x="180" y="0" width="90" height="50" rx="6" fill="#35261c" stroke="#1d1612" stroke-width="2" />
+      <rect x="280" y="0" width="70" height="50" rx="6" fill="#2d2017" stroke="#1d1612" stroke-width="2" />
+      
+      <rect x="0" y="60" width="80" height="60" rx="8" fill="#31241a" stroke="#1d1612" stroke-width="2" />
+      <rect x="90" y="60" width="110" height="60" rx="8" fill="#3a2a1f" stroke="#1d1612" stroke-width="2" />
+      <rect x="210" y="60" width="110" height="60" rx="8" fill="#34251b" stroke="#1d1612" stroke-width="2" />
+      <rect x="330" y="60" width="80" height="60" rx="8" fill="#2d2017" stroke="#1d1612" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Dramatic Exotic Boot Display (Side Silhouette) -->
+  <g transform="translate(100, 140)">
+    <!-- Shadow -->
+    <ellipse cx="200" cy="460" rx="200" ry="24" fill="#000000" opacity="0.85" />
+
+    <!-- Boot Shaft -->
+    <path d="M120,40 C140,25 240,25 260,40 L275,300 L110,310 Z" fill="#181411" stroke="#806247" stroke-width="1.8" />
+    <!-- Collar pull-straps -->
+    <path d="M110,60 L120,60 L120,110 L110,110 Z" fill="#2a1f18" stroke="#C7A477" stroke-width="1" />
+    <path d="M260,60 L270,60 L270,110 L260,110 Z" fill="#2a1f18" stroke="#C7A477" stroke-width="1" />
+    <!-- Detailed Western embroidery on shaft -->
+    <path d="M140,70 Q190,170 145,260" stroke="#806247" stroke-width="1.5" fill="none" stroke-dasharray="4 2" />
+    <path d="M240,70 Q190,170 235,260" stroke="#806247" stroke-width="1.5" fill="none" stroke-dasharray="4 2" />
+    <path d="M190,80 Q190,180 190,260" stroke="#C7A477" stroke-width="1" fill="none" opacity="0.8" />
+
+    <!-- Vamp (Exotic Caiman Belly) -->
+    <path d="M110,310 L275,300 C320,330 380,360 410,400 C415,408 410,418 395,420 L80,420 L75,365 Z" fill="#261b14" stroke="#806247" stroke-width="1.5" />
+    
+    <!-- Caiman scale texture grooves -->
+    <line x1="160" y1="315" x2="160" y2="415" stroke="#3d2a1c" stroke-width="2" />
+    <line x1="210" y1="318" x2="220" y2="415" stroke="#3d2a1c" stroke-width="2" />
+    <line x1="260" y1="330" x2="280" y2="415" stroke="#3d2a1c" stroke-width="2" />
+    <line x1="310" y1="350" x2="335" y2="415" stroke="#3d2a1c" stroke-width="2" />
+    <line x1="360" y1="375" x2="385" y2="415" stroke="#3d2a1c" stroke-width="2" />
+
+    <!-- Outsole and Lemonwood Pegged Heel -->
+    <path d="M80,420 L70,470 L130,470 L140,420 Z" fill="#14100d" stroke="#806247" stroke-width="1" />
+    <rect x="70" y="460" width="60" height="10" fill="#080808" />
+    
+    <!-- Leather Sole edge with double welt stitch -->
+    <path d="M75,420 L400,418 L400,432 L75,434 Z" fill="#362417" stroke="#C7A477" stroke-width="1" />
+    <line x1="140" y1="424" x2="395" y2="422" stroke="#F1EDE6" stroke-width="1.2" stroke-dasharray="2 3" />
+  </g>
+
+  <!-- Bronze metallic badge banner -->
+  <g transform="translate(40, 610)">
+    <rect width="180" height="34" rx="2" fill="#181716" stroke="#806247" stroke-width="1" />
+    <text x="90" y="22" text-anchor="middle" font-family="'Cinzel', serif" font-size="12" font-weight="700" letter-spacing="2" fill="#C7A477">GENUINE CAIMAN</text>
+  </g>
+</svg>

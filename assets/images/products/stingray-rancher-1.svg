@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Stingray Rancher Western Boot Profile">
+  <defs>
+    <radialGradient id="stingBg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="70%" stop-color="#12100f" />
+      <stop offset="100%" stop-color="#080807" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#stingBg)" />
+  <ellipse cx="250" cy="420" rx="190" ry="20" fill="#000000" opacity="0.9" />
+  <g transform="translate(60, 40)">
+    <!-- Shaft with Western stitch -->
+    <path d="M120,40 C140,25 240,25 260,40 L275,280 L110,290 Z" fill="#151515" stroke="#806247" stroke-width="1.8" />
+    <path d="M140,70 Q190,160 145,240" stroke="#C7A477" stroke-width="1.5" fill="none" />
+    <path d="M240,70 Q190,160 235,240" stroke="#C7A477" stroke-width="1.5" fill="none" />
+    <!-- Vamp (Polished Row Stone Stingray with central white diamond eye) -->
+    <path d="M110,290 L275,280 C320,305 375,335 405,370 C410,378 405,388 390,390 L80,390 L75,340 Z" fill="#1a1a1c" stroke="#555" stroke-width="1.5" />
+    <!-- Stingray pearl beaded texture dots -->
+    <g fill="#444448" opacity="0.6">
+      <circle cx="160" cy="340" r="1.5" /><circle cx="180" cy="330" r="1.5" /><circle cx="200" cy="345" r="1.5" />
+      <circle cx="220" cy="325" r="1.5" /><circle cx="240" cy="340" r="1.5" /><circle cx="260" cy="330" r="1.5" />
+      <circle cx="280" cy="345" r="1.5" /><circle cx="300" cy="355" r="1.5" /><circle cx="320" cy="365" r="1.5" />
+    </g>
+    <!-- Center white diamond stingray eye (hallmark of row-stone stingray) -->
+    <g transform="translate(250, 335)">
+      <polygon points="0,-12 8,0 0,12 -8,0" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+      <circle cx="0" cy="0" r="3" fill="#806247" />
+    </g>
+    <!-- Heel & Sole -->
+    <path d="M80,390 L70,435 L125,435 L135,390 Z" fill="#14100d" stroke="#806247" stroke-width="1" />
+    <path d="M75,390 L395,388 L395,402 L75,404 Z" fill="#2d1c13" stroke="#C7A477" stroke-width="1" />
+  </g>
+</svg>

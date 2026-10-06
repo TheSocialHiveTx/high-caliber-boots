@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Heavy Waxed Canvas Ranch Coat">
+  <defs>
+    <radialGradient id="bg_waxed-ranch-coat1" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#221e1a" />
+      <stop offset="70%" stop-color="#14110f" />
+      <stop offset="100%" stop-color="#080706" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg_waxed-ranch-coat1)" />
+  <ellipse cx="250" cy="430" rx="180" ry="18" fill="#000000" opacity="0.85" />
+  <g transform="translate(60, 45)">
+    <path d="M70,80 L140,30 L240,30 L310,80 L355,180 L315,210 L280,160 L285,380 L95,380 L100,160 L65,210 L25,180 Z" fill="#30261c" stroke="#806247" stroke-width="1.8" />
+    <polygon points="140,30 190,75 150,95 110,45" fill="#1b140e" stroke="#806247" stroke-width="1" />
+    <polygon points="240,30 190,75 230,95 270,45" fill="#1b140e" stroke="#806247" stroke-width="1" />
+    <rect x="180" y="70" width="20" height="310" fill="#423427" stroke="#806247" stroke-width="1" />
+    <line x1="190" y1="75" x2="190" y2="375" stroke="#C7A477" stroke-width="2" stroke-dasharray="4 2" />
+    <path d="M105,240 L145,240 L135,320 L105,320 Z" fill="#423427" stroke="#806247" stroke-width="1" />
+    <path d="M275,240 L235,240 L245,320 L275,320 Z" fill="#423427" stroke="#806247" stroke-width="1" />
+  </g>
+</svg>

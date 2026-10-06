@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" fill="none" role="img" aria-label="High Caliber Atmospheric Western Hero">
+  <defs>
+    <!-- Dark Atmospheric Stage Spotlight -->
+    <radialGradient id="stageSpotlight" cx="68%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#3d2c1e" stop-opacity="0.85" />
+      <stop offset="35%" stop-color="#241a12" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#120e0a" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#070605" stop-opacity="1" />
+    </radialGradient>
+
+    <!-- Warm Golden Ambient Rim -->
+    <radialGradient id="goldRim" cx="72%" cy="30%" r="35%">
+      <stop offset="0%" stop-color="#C7A477" stop-opacity="0.35" />
+      <stop offset="60%" stop-color="#806247" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Bronze Foil Gradient -->
+    <linearGradient id="bronzeFoil" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8EE" />
+      <stop offset="25%" stop-color="#E2C9A5" />
+      <stop offset="60%" stop-color="#A57D52" />
+      <stop offset="100%" stop-color="#5E3E22" />
+    </linearGradient>
+
+    <!-- Reclaimed Barnwood Timber Planks -->
+    <linearGradient id="plank1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1813" />
+      <stop offset="50%" stop-color="#14100c" />
+      <stop offset="100%" stop-color="#0a0806" />
+    </linearGradient>
+
+    <linearGradient id="plankHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C7A477" stop-opacity="0" />
+      <stop offset="50%" stop-color="#C7A477" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#C7A477" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filter for realistic leather grain & noise -->
+    <filter id="leatherNoise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" result="noise" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0.8  0 0 0 0 0.65  0 0 0 0 0.45  0 0 0 0.04 0" />
+      <feComposite in2="SourceGraphic" in="glint" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Atmospheric Canvas -->
+  <rect width="1920" height="1080" fill="#070605" />
+  <rect width="1920" height="1080" fill="url(#stageSpotlight)" />
+  <circle cx="1380" cy="460" r="580" fill="url(#goldRim)" />
+
+  <!-- Background Caiman Texture Tessellation on right -->
+  <g opacity="0.12">
+    <pattern id="heroCaimanHigh" width="48" height="48" patternUnits="userSpaceOnUse">
+      <rect x="2" y="2" width="21" height="21" rx="3" fill="#2d2218" stroke="#4a3726" stroke-width="1" />
+      <rect x="25" y="2" width="21" height="21" rx="3" fill="#241b13" stroke="#4a3726" stroke-width="1" />
+      <rect x="2" y="25" width="21" height="21" rx="3" fill="#221911" stroke="#4a3726" stroke-width="1" />
+      <rect x="25" y="25" width="21" height="21" rx="3" fill="#2a1f16" stroke="#4a3726" stroke-width="1" />
+    </pattern>
+    <rect x="800" y="0" width="1120" height="1080" fill="url(#heroCaimanHigh)" />
+  </g>
+
+  <!-- Reclaimed Dark Oak Bench Floor (Floor Perspective) -->
+  <polygon points="0,820 1920,760 1920,1080 0,1080" fill="url(#plank1)" />
+  <line x1="0" y1="820" x2="1920" y2="760" stroke="url(#plankHighlight)" stroke-width="2.5" />
+  <line x1="0" y1="890" x2="1920" y2="830" stroke="#1f1812" stroke-width="2" />
+  <line x1="0" y1="965" x2="1920" y2="905" stroke="#18120e" stroke-width="2" />
+  <line x1="0" y1="1040" x2="1920" y2="980" stroke="#100c09" stroke-width="2" />
+
+  <!-- Pair of Handcrafted Caiman Exotic Boots (Center-Right Hero Piece) -->
+  <g transform="translate(1080, 200)">
+    <!-- Floor Drop Shadows -->
+    <ellipse cx="320" cy="625" rx="360" ry="48" fill="#000000" opacity="0.95" />
+    <ellipse cx="260" cy="620" rx="240" ry="32" fill="#000000" opacity="0.8" />
+
+    <!-- REAR BOOT (Left pair, angled inward) -->
+    <g transform="translate(-50, 15) scale(0.96)" opacity="0.7">
+      <path d="M190,50 Q260,25 330,55 L345,395 L190,405 Z" fill="#1b1511" stroke="#3d2c1e" stroke-width="2" />
+      <path d="M190,405 L345,395 C395,425 460,455 520,500 L530,535 L170,535 L150,475 Z" fill="#241a13" />
+      <path d="M150,535 L220,535 L205,595 L160,595 Z" fill="#0e0b08" />
+      <path d="M145,535 L535,533 L535,548 L145,550 Z" fill="#362518" stroke="#806247" />
+    </g>
+
+    <!-- FOREGROUND SIGNATURE CAIMAN BELLY BOOT -->
+    <g>
+      <!-- Shaft: Hand-Corded Calfskin with intricate 8-row Western Stitching -->
+      <path d="M220,40 Q285,15 355,42 L372,400 L212,410 Z" fill="#221a14" stroke="#806247" stroke-width="2.5" />
+      <!-- Western Deep Scallop Collar -->
+      <path d="M220,40 Q287,75 355,42" fill="none" stroke="url(#bronzeFoil)" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M223,46 Q287,79 352,48" fill="none" stroke="#221a14" stroke-width="1.5" />
+
+      <!-- Leather Pull Straps with Antiqued Bronze Concho -->
+      <rect x="202" y="60" width="18" height="68" rx="4" fill="#2c2017" stroke="url(#bronzeFoil)" stroke-width="1.2" />
+      <rect x="352" y="60" width="18" height="68" rx="4" fill="#2c2017" stroke="url(#bronzeFoil)" stroke-width="1.2" />
+      <circle cx="211" cy="74" r="4.5" fill="url(#bronzeFoil)" />
+      <circle cx="361" cy="74" r="4.5" fill="url(#bronzeFoil)" />
+      <circle cx="211" cy="74" r="1.8" fill="#18120e" />
+      <circle cx="361" cy="74" r="1.8" fill="#18120e" />
+
+      <!-- 8-Row Western Embroidery Shaft Cordwork -->
+      <g stroke="#C7A477" fill="none" opacity="0.85">
+        <path d="M245,85 Q285,185 250,300 Q285,355 320,300 Q285,185 325,85" stroke-width="2" />
+        <path d="M258,110 Q285,185 264,280 Q285,325 306,280 Q285,185 312,110" stroke="#806247" stroke-width="1.8" />
+        <path d="M272,135 Q285,185 276,260 Q285,295 294,260 Q285,185 298,135" stroke="#F1EDE6" stroke-width="1.2" opacity="0.75" />
+        <!-- Center diamond flourishment -->
+        <polygon points="285,190 292,205 285,220 278,205" fill="url(#bronzeFoil)" stroke="none" />
+      </g>
+
+      <!-- Signature Caiman Belly Vamp (Exotic Glazed Espresso Tiles) -->
+      <path d="M212,410 L372,400 C430,430 500,460 565,505 C578,516 575,532 555,540 L168,542 L158,475 Z" fill="#322216" stroke="url(#bronzeFoil)" stroke-width="1.8" />
+
+      <!-- Multi-Stop Volumetric Scale Highlights & Grooves -->
+      <g stroke="#1e130c" stroke-width="2.5">
+        <!-- Vertical scale tile boundaries -->
+        <line x1="285" y1="422" x2="305" y2="534" />
+        <line x1="340" y1="432" x2="370" y2="534" />
+        <line x1="400" y1="448" x2="435" y2="534" />
+        <line x1="465" y1="472" x2="500" y2="534" />
+        <line x1="520" y1="495" x2="545" y2="534" />
+
+        <!-- Horizontal scale rows -->
+        <path d="M250,462 Q365,470 540,518" fill="none" />
+        <path d="M230,498 Q355,504 515,530" fill="none" />
+      </g>
+
+      <!-- Glazed Scale Specular Sheen (Gloss Reflection on exotic leather) -->
+      <path d="M295,435 Q350,442 420,465 Q370,470 300,460 Z" fill="#F1EDE6" opacity="0.18" filter="blur(1px)" />
+      <path d="M355,475 Q420,485 490,510 Q440,515 365,502 Z" fill="#C7A477" opacity="0.22" filter="blur(1px)" />
+
+      <!-- Lemonwood Pegged Arch & Sole Edge -->
+      <!-- Underslung 1.5" Stockman Stacked Leather Heel -->
+      <path d="M165,540 L235,540 L220,600 L175,600 Z" fill="#140f0b" stroke="#806247" stroke-width="1.2" />
+      <rect x="175" y="590" width="45" height="10" fill="#080706" />
+
+      <!-- 3/4 Goodyear Leather Welt Outsole with Double Stitch -->
+      <path d="M160,540 L570,538 L575,554 L164,556 Z" fill="#422c1b" stroke="url(#bronzeFoil)" stroke-width="1.5" />
+      <!-- White high-tensile welt thread -->
+      <line x1="235" y1="545" x2="565" y2="543" stroke="#F1EDE6" stroke-width="1.8" stroke-dasharray="2 3" opacity="0.9" />
+
+      <!-- Burnished Antiqued Bronze Spur on Heel -->
+      <g transform="translate(150, 495)">
+        <path d="M22,25 C4,25 -4,42 -18,50 L-26,50 L-18,56 C0,62 20,54 28,50 Z" fill="url(#bronzeFoil)" stroke="#3d2716" stroke-width="1" />
+        <!-- Spur Band Engraving -->
+        <line x1="5" y1="36" x2="18" y2="34" stroke="#4a2e18" stroke-width="1.5" />
+        <!-- Spur Star Rowel -->
+        <circle cx="-28" cy="53" r="12" fill="#18110b" stroke="url(#bronzeFoil)" stroke-width="1.5" />
+        <polygon points="-28,41 -25,49 -16,53 -25,57 -28,65 -31,57 -40,53 -31,49" fill="url(#bronzeFoil)" />
+        <circle cx="-28" cy="53" r="3" fill="#140f0b" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Ambient Golden Dust Particles / Fine Reclaimed Sparkles -->
+  <g fill="#C7A477" opacity="0.45">
+    <circle cx="1250" cy="280" r="1.8" />
+    <circle cx="1420" cy="210" r="2.2" />
+    <circle cx="1580" cy="340" r="1.5" />
+    <circle cx="1700" cy="260" r="2" />
+    <circle cx="1320" cy="460" r="1.6" />
+    <circle cx="1490" cy="520" r="1.4" />
+  </g>
+</svg>

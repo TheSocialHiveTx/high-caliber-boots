@@ -1,0 +1,6 @@
+{
+  "name": "High Caliber Boots",
+  "description": "Premium Western retail storefront specializing in handcrafted exotic boots, Western boots, work boots, apparel, FR clothing, and leather gear.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

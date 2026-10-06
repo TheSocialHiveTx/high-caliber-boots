@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Stingray Diamond Crown Detail">
+  <defs>
+    <radialGradient id="stingBg2" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#22201e" />
+      <stop offset="70%" stop-color="#12100f" />
+      <stop offset="100%" stop-color="#080807" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#stingBg2)" />
+  <!-- Macro Close up of Stingray Diamond -->
+  <g transform="translate(150, 120)">
+    <circle cx="100" cy="120" r="160" fill="#141415" stroke="#333" stroke-width="2" />
+    <!-- Pearl bead texture -->
+    <g fill="#3a3a3d">
+      <circle cx="40" cy="80" r="4" /><circle cx="60" cy="70" r="4" /><circle cx="80" cy="65" r="5" />
+      <circle cx="120" cy="65" r="5" /><circle cx="140" cy="70" r="4" /><circle cx="160" cy="80" r="4" />
+      <circle cx="40" cy="160" r="4" /><circle cx="60" cy="170" r="4" /><circle cx="140" cy="170" r="4" /><circle cx="160" cy="160" r="4" />
+    </g>
+    <!-- Center Polished Diamond Eye -->
+    <polygon points="100,50 145,120 100,190 55,120" fill="#F1EDE6" stroke="#C7A477" stroke-width="2" />
+    <polygon points="100,75 125,120 100,165 75,120" fill="#E2DDD5" stroke="#806247" stroke-width="1.5" />
+    <circle cx="100" cy="120" r="7" fill="#806247" />
+  </g>
+</svg>

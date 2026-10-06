@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%" fill="none" role="img" aria-label="Sawtooth Denim Western Shirt">
+  <defs>
+    <radialGradient id="bg_sawtooth-denim-shirt1" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1e1c1a" />
+      <stop offset="70%" stop-color="#121110" />
+      <stop offset="100%" stop-color="#080706" />
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg_sawtooth-denim-shirt1)" />
+  <ellipse cx="250" cy="430" rx="170" ry="18" fill="#000000" opacity="0.8" />
+  <g transform="translate(60, 50)">
+    <path d="M90,70 L150,30 L230,30 L290,70 L330,130 L295,170 L265,140 L275,370 L105,370 L115,140 L85,170 L50,130 Z" fill="#1a2230" stroke="#C7A477" stroke-width="1.5" />
+    <!-- Western yoke -->
+    <path d="M120,90 L150,120 L190,105 L230,120 L260,90" stroke="#C7A477" stroke-width="1.5" fill="none" />
+    <!-- Pockets -->
+    <rect x="125" y="140" width="38" height="38" rx="2" fill="#273449" stroke="#C7A477" stroke-width="1" />
+    <rect x="215" y="140" width="38" height="38" rx="2" fill="#273449" stroke="#C7A477" stroke-width="1" />
+    <!-- Buttons -->
+    <line x1="190" y1="30" x2="190" y2="370" stroke="#C7A477" stroke-width="1" stroke-dasharray="3 3" />
+    <circle cx="190" cy="70" r="3" fill="#F1EDE6" /><circle cx="190" cy="110" r="3" fill="#F1EDE6" />
+    <circle cx="190" cy="160" r="3" fill="#F1EDE6" /><circle cx="190" cy="210" r="3" fill="#F1EDE6" />
+    <circle cx="190" cy="260" r="3" fill="#F1EDE6" /><circle cx="190" cy="310" r="3" fill="#F1EDE6" />
+  </g>
+</svg>

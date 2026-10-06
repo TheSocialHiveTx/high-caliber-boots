@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" fill="none" role="img" aria-label="Western Clothing Collection">
+  <defs>
+    <radialGradient id="clothBg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#211d19" />
+      <stop offset="60%" stop-color="#141210" />
+      <stop offset="100%" stop-color="#0a0908" />
+    </radialGradient>
+    <linearGradient id="denimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d3748" />
+      <stop offset="50%" stop-color="#1a202c" />
+      <stop offset="100%" stop-color="#12161f" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="700" fill="url(#clothBg)" />
+
+  <!-- Western Pearl Snap Sawtooth Denim Shirt & Heavy Waxed Canvas Vest Silhouette -->
+  <g transform="translate(100, 100)">
+    <!-- Shadow -->
+    <ellipse cx="200" cy="480" rx="200" ry="24" fill="#000000" opacity="0.8" />
+
+    <!-- Western Shirt Body (Indigo Raw Denim) -->
+    <path d="M100,100 L160,50 L240,50 L300,100 L340,160 L310,210 L270,180 L280,440 L120,440 L130,180 L90,210 L60,160 Z" fill="url(#denimGrad)" stroke="#4a5568" stroke-width="1.5" />
+    
+    <!-- Western Pointed Back/Front Yoke -->
+    <path d="M130,120 L160,150 L200,130 L240,150 L270,120" stroke="#C7A477" stroke-width="2" fill="none" />
+    
+    <!-- Sawtooth Flap Chest Pockets with Pearl Snaps -->
+    <!-- Left Pocket -->
+    <g transform="translate(135, 170)">
+      <path d="M0,0 L20,12 L40,0 L40,45 L0,45 Z" fill="#1e2633" stroke="#C7A477" stroke-width="1" />
+      <circle cx="10" cy="8" r="2.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="0.8" />
+      <circle cx="30" cy="8" r="2.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="0.8" />
+    </g>
+    <!-- Right Pocket -->
+    <g transform="translate(225, 170)">
+      <path d="M0,0 L20,12 L40,0 L40,45 L0,45 Z" fill="#1e2633" stroke="#C7A477" stroke-width="1" />
+      <circle cx="10" cy="8" r="2.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="0.8" />
+      <circle cx="30" cy="8" r="2.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="0.8" />
+    </g>
+
+    <!-- Center Placket & Pearl Snaps -->
+    <line x1="200" y1="50" x2="200" y2="440" stroke="#C7A477" stroke-width="1.5" stroke-dasharray="3 3" />
+    <circle cx="200" cy="80" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="120" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="160" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="210" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="260" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="310" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+    <circle cx="200" cy="360" r="3.5" fill="#F1EDE6" stroke="#C7A477" stroke-width="1" />
+
+    <!-- Western Pointed Collar -->
+    <polygon points="160,50 200,90 170,110 135,60" fill="#2d3748" stroke="#C7A477" stroke-width="1" />
+    <polygon points="240,50 200,90 230,110 265,60" fill="#2d3748" stroke="#C7A477" stroke-width="1" />
+
+    <!-- Contrast Tobacco Contrast Stitching on Hem -->
+    <line x1="120" y1="435" x2="280" y2="435" stroke="#C7A477" stroke-width="1.5" stroke-dasharray="4 2" />
+  </g>
+
+  <!-- Tag -->
+  <g transform="translate(40, 610)">
+    <rect width="190" height="34" rx="2" fill="#181716" stroke="#806247" stroke-width="1" />
+    <text x="95" y="22" text-anchor="middle" font-family="'Cinzel', serif" font-size="12" font-weight="700" letter-spacing="2" fill="#C7A477">RANCH &amp; APPAREL</text>
+  </g>
+</svg>

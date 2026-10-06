@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Product Details | High Caliber Boots</title>
+    <meta name="description" id="pageDescription" content="Handcrafted Western boots and outfitter gear from High Caliber." />
+    
+    <link rel="canonical" href="https://highcaliberboots.com/product/" />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="High Caliber Boots" />
+    <meta property="og:title" id="ogTitle" content="Product Details | High Caliber Boots" />
+    <meta property="og:description" id="ogDescription" content="Handcrafted Western boots and outfitter gear from High Caliber." />
+    <meta property="og:image" id="ogImage" content="../assets/images/branding/logo.svg" />
+    
+    <link rel="icon" type="image/svg+xml" href="../assets/images/branding/monogram.svg" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <!-- TOP LUXURY ANNOUNCEMENT MARQUEE BAR -->
+    <div class="announcement-bar" role="region" aria-label="Store Announcement">
+      <div class="container">
+        <div class="announcement-inner">
+          <span class="announcement-star" aria-hidden="true">★</span>
+          <span class="announcement-text">COMPLIMENTARY INSURED US SHIPPING ON ORDERS $150+</span>
+          <span class="announcement-star" aria-hidden="true">★</span>
+          <span class="announcement-text">30-DAY RISK-FREE EXCHANGES &bull; LIFETIME WELT CRAFTSMANSHIP</span>
+          <span class="announcement-star" aria-hidden="true">★</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GLOBAL HEADER -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <div class="header-brand">
+          <a href="../" aria-label="High Caliber Boots Home">
+            <img src="../assets/images/branding/logo.svg" alt="High Caliber Boots" class="header-logo" width="320" height="48" />
+          </a>
+        </div>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <a href="../shop/" class="nav-link">Shop</a>
+          <div class="nav-item-has-dropdown">
+            <a href="../boots/" class="nav-link is-active">Boots</a>
+            <div class="dropdown-menu">
+              <a href="../boots/exotic/" class="dropdown-link">Exotic Boots</a>
+              <a href="../boots/western/" class="dropdown-link">Western Boots</a>
+              <a href="../boots/work/" class="dropdown-link">Work &amp; Safety Boots</a>
+              <a href="../boots/" class="dropdown-link">All Boots</a>
+            </div>
+          </div>
+          <a href="../clothing/" class="nav-link">Clothing</a>
+          <a href="../fr-clothing/" class="nav-link">FR Clothing</a>
+          <a href="../accessories/" class="nav-link">Accessories</a>
+          <a href="../about/" class="nav-link">About</a>
+        </nav>
+
+        <div class="header-utility">
+          <button type="button" class="utility-btn" data-search-trigger aria-label="Search Catalog">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <a href="../contact/" class="utility-btn account-placeholder-btn" aria-label="Customer Care">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </a>
+          <button type="button" class="utility-btn cart-btn cart-trigger-btn" aria-label="Shopping Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-badge" style="display: none;">0</span>
+          </button>
+          <button type="button" class="utility-btn mobile-toggle-btn" id="mobileNavToggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+    <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
+      <div class="mobile-nav-header">
+        <img src="../assets/images/branding/logo.svg" alt="High Caliber" class="mobile-drawer-logo" />
+        <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li class="mobile-nav-item"><a href="../shop/" class="mobile-nav-link">Shop All</a></li>
+        <li class="mobile-nav-item">
+          <a href="../boots/" class="mobile-nav-link">
+            <span>Boots</span>
+            <button type="button" class="mobile-nav-accordion-trigger" aria-label="Toggle Boots Submenu">+</button>
+          </a>
+          <ul class="mobile-nav-submenu">
+            <li><a href="../boots/exotic/" class="mobile-nav-sublink">Exotic Boots</a></li>
+            <li><a href="../boots/western/" class="mobile-nav-sublink">Western Boots</a></li>
+            <li><a href="../boots/work/" class="mobile-nav-sublink">Work &amp; Safety Boots</a></li>
+            <li><a href="../boots/" class="mobile-nav-sublink">View All Boots</a></li>
+          </ul>
+        </li>
+        <li class="mobile-nav-item"><a href="../clothing/" class="mobile-nav-link">Clothing</a></li>
+        <li class="mobile-nav-item"><a href="../fr-clothing/" class="mobile-nav-link">FR Clothing</a></li>
+        <li class="mobile-nav-item"><a href="../accessories/" class="mobile-nav-link">Accessories</a></li>
+        <li class="mobile-nav-item"><a href="../about/" class="mobile-nav-link">About High Caliber</a></li>
+        <li class="mobile-nav-item"><a href="../faq/" class="mobile-nav-link">FAQ &amp; Shipping</a></li>
+        <li class="mobile-nav-item"><a href="../contact/" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <button type="button" class="btn btn-primary" style="width: 100%;" data-search-trigger>
+          SEARCH STORE
+        </button>
+      </div>
+    </aside>
+
+    <main id="mainContent">
+
+      <section class="pdp-section" aria-label="Product Showcase">
+        <div class="container">
+          
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb-nav" id="pdpBreadcrumb" aria-label="Breadcrumb">
+            <a href="../">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../shop/">Shop</a>
+            <span class="breadcrumb-sep">/</span>
+            <span id="pdpBreadcrumbTitle">Product</span>
+          </nav>
+
+          <!-- PDP Main Grid (Gallery Left + Purchase Module Right) -->
+          <div class="pdp-grid" id="pdpMainGrid">
+            
+            <!-- Left: Gallery -->
+            <div class="pdp-gallery-col">
+              <div class="pdp-main-image-wrap">
+                <img 
+                  id="pdpMainImg" 
+                  src="../assets/images/branding/monogram.svg" 
+                  alt="Product view" 
+                  class="pdp-main-image" 
+                />
+              </div>
+              <div class="pdp-thumbs-row" id="pdpThumbsRow">
+                <!-- Thumbs injected dynamically -->
+              </div>
+            </div>
+
+            <!-- Right: Contiguous Purchase Module -->
+            <div class="pdp-info-col">
+              <span class="pdp-vendor" id="pdpVendor">HIGH CALIBER</span>
+              <h1 class="pdp-title" id="pdpTitle">Loading Product...</h1>
+              
+              <div class="pdp-pricing-row">
+                <span class="pdp-price tabular-nums" id="pdpPrice">$0.00</span>
+                <span class="pdp-compare-price tabular-nums" id="pdpComparePrice" style="display: none;">$0.00</span>
+              </div>
+
+              <!-- Variant Selector (Sizes) -->
+              <div class="pdp-option-group" id="pdpVariantGroup">
+                <div class="pdp-option-label-row">
+                  <span class="pdp-option-title">SELECT SIZE &amp; WIDTH</span>
+                  <a href="../faq/#sizing" class="pdp-size-guide-btn">Sizing Guide</a>
+                </div>
+                <div class="pdp-variants-grid" id="pdpVariantsGrid">
+                  <!-- Variants injected dynamically -->
+                </div>
+              </div>
+
+              <!-- Quantity & Buy Action -->
+              <div class="pdp-actions-row">
+                <div class="pdp-qty-wrap">
+                  <button type="button" class="pdp-qty-btn" id="pdpQtyDec" aria-label="Decrease quantity">−</button>
+                  <span class="pdp-qty-input tabular-nums" id="pdpQtyVal">1</span>
+                  <button type="button" class="pdp-qty-btn" id="pdpQtyInc" aria-label="Increase quantity">+</button>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-add-to-cart" id="pdpAddToCartBtn">
+                  ADD TO BAG
+                </button>
+              </div>
+
+              <!-- Description -->
+              <p class="pdp-desc-text" id="pdpDescText"></p>
+
+              <!-- Technical Details Bullet List -->
+              <ul class="pdp-details-list" id="pdpDetailsList"></ul>
+
+              <!-- Accordions: Shipping & Returns -->
+              <div class="accordion-group">
+                <div class="accordion-item">
+                  <button type="button" class="accordion-trigger" aria-expanded="false">
+                    <span>SHIPPING &amp; COMPLIMENTARY FREIGHT</span>
+                    <span class="accordion-icon">+</span>
+                  </button>
+                  <div class="accordion-content">
+                    All orders over $150 qualify for complimentary insured ground freight. Orders are packed with protective wrapping and dispatched within 1–2 business days.
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button type="button" class="accordion-trigger" aria-expanded="false">
+                    <span>EXCHANGE &amp; RESOLE WARRANTY</span>
+                    <span class="accordion-icon">+</span>
+                  </button>
+                  <div class="accordion-content">
+                    Unworn boots tried indoors on clean carpet are eligible for exchanges or returns. Goodyear welt construction guarantees this boot can be resoled throughout its lifetime.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RELATED PRODUCTS SECTION -->
+      <section class="products-section" aria-label="Related Boots and Gear">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-kicker">Complete The Kit</span>
+            <h2 class="section-title">YOU MAY ALSO LIKE</h2>
+            <img src="../assets/images/textures/western-divider.svg" alt="" class="western-divider" />
+          </header>
+
+          <div class="product-grid" id="relatedProductGrid"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ======================================================================
+         GLOBAL FOOTER (ARCHITECTURAL LUXURY MAISON)
+         ====================================================================== -->
+    <footer class="site-footer" role="contentinfo">
+      
+      <!-- FOOTER TOP TRUST PILLARS (CLEAN SVG VECTOR ARCHITECTURE) -->
+      <div class="footer-trust-strip">
+        <div class="container footer-trust-grid">
+          
+          <div class="footer-trust-item">
+            <div class="footer-trust-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <div>
+              <h4 class="footer-trust-title">COMPLIMENTARY INSURED FREIGHT</h4>
+              <p class="footer-trust-desc">Insured US ground shipping on all boot orders over $150.</p>
+            </div>
+          </div>
+
+          <div class="footer-trust-item">
+            <div class="footer-trust-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="footer-trust-title">30-DAY COMPLIMENTARY EXCHANGES</h4>
+              <p class="footer-trust-desc">Prepaid return labels and dedicated master fit assistance.</p>
+            </div>
+          </div>
+
+          <div class="footer-trust-item">
+            <div class="footer-trust-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m14 12-8.5 8.5a2.12 2.12 0 1 1-3-3L11 9"></path>
+                <path d="M15 13 9 7l4-4 6 6-4 4z"></path>
+                <path d="m18 10 2 2"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="footer-trust-title">LEMONWOOD-PEGGED BENCH QUALITY</h4>
+              <p class="footer-trust-desc">100% pegged waist with recraftable Goodyear welt construction.</p>
+            </div>
+          </div>
+
+          <div class="footer-trust-item">
+            <div class="footer-trust-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polygon points="12 8 13.5 11 16.5 11.5 14 14 14.8 17.2 12 15.5 9.2 17.2 10 14 7.5 11.5 10.5 11 12 8"></polygon>
+              </svg>
+            </div>
+            <div>
+              <h4 class="footer-trust-title">MASTER BOOTMAKER WARRANTY</h4>
+              <p class="footer-trust-desc">Texas atelier concierge &amp; craftsmanship defect guarantee.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- MAIN 4-COLUMN ARCHITECTURAL LINKS -->
+      <div class="container footer-inner">
+        
+        <!-- Col 1: Maison & Atelier Concierge -->
+        <div class="footer-col brand-col">
+          <a href="../" class="footer-brand-link" aria-label="High Caliber Boots Home">
+            <img src="../assets/images/branding/logo.svg" alt="High Caliber Boots" class="footer-logo" width="300" height="46" />
+          </a>
+          <p class="footer-brand-desc">
+            Master hand-lasted Western bootmakers and Grade-A exotic leather outfitter. Handcrafted in small Texas bench batches with genuine lemonwood pegging and recraftable Goodyear welts.
+          </p>
+          <div class="footer-atelier-info">
+            <div class="atelier-line">
+              <span class="atelier-label">WORKSHOP CONCIERGE:</span>
+              <span class="atelier-val">Mon–Sat 9AM–7PM CST</span>
+            </div>
+            <div class="atelier-line">
+              <span class="atelier-label">DIRECT INQUIRIES:</span>
+              <a href="mailto:concierge@highcaliberboots.com" class="atelier-email">concierge@highcaliberboots.com</a>
+            </div>
+            <div class="atelier-line">
+              <span class="atelier-label">BENCH WORKSHOPS:</span>
+              <span class="atelier-val">Fort Worth &amp; Austin, Texas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Col 2: Footwear Vault -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">FOOTWEAR VAULT</h3>
+          <ul class="footer-links">
+            <li><a href="../boots/exotic/">Exotic Caiman Boots</a></li>
+            <li><a href="../boots/exotic/">Nile Crocodile Ropers</a></li>
+            <li><a href="../boots/exotic/">Full-Quill Ostrich</a></li>
+            <li><a href="../boots/western/">Western Heritage Classics</a></li>
+            <li><a href="../boots/western/">American Bison Roughout</a></li>
+            <li><a href="../boots/work/">ASTM Steel Toe Work</a></li>
+            <li><a href="../boots/">View All Benchmarks &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Outfitter & Apparel -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">OUTFITTER &amp; APPAREL</h3>
+          <ul class="footer-links">
+            <li><a href="../clothing/">Waxed Canvas Barn Coats</a></li>
+            <li><a href="../clothing/">Raw Indigo Sawtooth Shirts</a></li>
+            <li><a href="../fr-clothing/">NFPA 2112 FR Workwear</a></li>
+            <li><a href="../fr-clothing/">Arc-Rated Safety Utility</a></li>
+            <li><a href="../accessories/">Hand-Tooled Leather Belts</a></li>
+            <li><a href="../accessories/">Amber &amp; Smoke Cologne</a></li>
+            <li><a href="../shop/">Explore Complete Catalog &rarr;</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Client Services -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">CLIENT SERVICES</h3>
+          <ul class="footer-links">
+            <li><a href="../about/">The High Caliber Atelier</a></li>
+            <li><a href="../contact/">Customer Care &amp; Concierge</a></li>
+            <li><a href="../faq/">Shipping &amp; Delivery Times</a></li>
+            <li><a href="../faq/">30-Day Free Exchanges</a></li>
+            <li><a href="../faq/#warranty">Lifetime Bench Warranty</a></li>
+            <li><a href="../faq/">Boot Fit &amp; Sizing Guide</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <div class="footer-bottom-left">
+            <p class="copyright-text">
+              &copy; <span id="currentYear">2026</span> High Caliber Boots &amp; Western Outfitters. Handcrafted in Texas. All rights reserved.
+            </p>
+            <div class="footer-bottom-links">
+              <a href="../faq/">Privacy Policy</a>
+              <span class="sep">&bull;</span>
+              <a href="../faq/">Terms of Service</a>
+              <span class="sep">&bull;</span>
+              <a href="../faq/">Accessibility</a>
+              <span class="sep">&bull;</span>
+              <a href="../faq/">Care Protocol</a>
+            </div>
+          </div>
+          <div class="footer-payment-strip">
+            <span class="payment-badge">Shop Pay</span>
+            <span class="payment-badge">Apple Pay</span>
+            <span class="payment-badge">Google Pay</span>
+            <span class="payment-badge">Visa</span>
+            <span class="payment-badge">Mastercard</span>
+            <span class="payment-badge">Amex</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/cart.js"></script>
+    <script type="module">
+      import { fetchProduct } from '../assets/js/shopify.js';
+      import { MOCK_PRODUCTS } from '../assets/js/mock-products.js';
+      import { renderProductCard } from '../assets/js/products.js';
+      import { cart } from '../assets/js/cart.js';
+
+      // Parse Query String
+      const params = new URLSearchParams(window.location.search);
+      const handle = params.get('handle') || 'caiman-belly-western-boot-espresso';
+
+      async function initPDP() {
+        const product = await fetchProduct(handle) || MOCK_PRODUCTS[0];
+        
+        // Page SEO metadata
+        document.title = `${product.title} | High Caliber Boots`;
+        document.getElementById('pageTitle').textContent = `${product.title} | High Caliber Boots`;
+        document.getElementById('pageDescription').setAttribute('content', product.description.slice(0, 155));
+        document.getElementById('ogTitle').setAttribute('content', product.title);
+        document.getElementById('ogDescription').setAttribute('content', product.description.slice(0, 155));
+
+        // Breadcrumb & Info
+        document.getElementById('pdpBreadcrumbTitle').textContent = product.title;
+        document.getElementById('pdpVendor').textContent = product.vendor || 'HIGH CALIBER';
+        document.getElementById('pdpTitle').textContent = product.title;
+        document.getElementById('pdpPrice').textContent = `$${product.price.toFixed(2)}`;
+        
+        if (product.compareAtPrice && product.compareAtPrice > product.price) {
+          const cmp = document.getElementById('pdpComparePrice');
+          cmp.textContent = `$${product.compareAtPrice.toFixed(2)}`;
+          cmp.style.display = 'inline-block';
+        }
+
+        document.getElementById('pdpDescText').textContent = product.description;
+
+        // Details list
+        const detailsEl = document.getElementById('pdpDetailsList');
+        if (product.details && product.details.length > 0) {
+          detailsEl.innerHTML = product.details.map(d => `<li>• ${d}</li>`).join('');
+        } else {
+          detailsEl.innerHTML = `<li>• Category: ${product.productType || 'Western Outfitter'}</li>`;
+        }
+
+        // Gallery
+        const mainImg = document.getElementById('pdpMainImg');
+        const thumbsRow = document.getElementById('pdpThumbsRow');
+        const rawImages = product.images && product.images.length > 0 ? product.images : ['assets/images/branding/monogram.svg'];
+        
+        const resolvePdpImg = (src) => {
+          if (!src) return '../assets/images/branding/monogram.svg';
+          if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('//') || src.startsWith('data:')) {
+            return src;
+          }
+          return `../${src.replace(/^\/+/, '')}`;
+        };
+
+        const images = rawImages.map(resolvePdpImg);
+        
+        mainImg.src = images[0];
+        mainImg.alt = product.title;
+
+        thumbsRow.innerHTML = images.map((img, idx) => `
+          <button type="button" class="pdp-thumb-btn ${idx === 0 ? 'is-active' : ''}" data-idx="${idx}">
+            <img src="${img}" alt="${product.title} view ${idx + 1}" class="pdp-thumb-img" />
+          </button>
+        `).join('');
+
+        thumbsRow.querySelectorAll('.pdp-thumb-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            thumbsRow.querySelectorAll('.pdp-thumb-btn').forEach(b => b.classList.remove('is-active'));
+            btn.classList.add('is-active');
+            const idx = parseInt(btn.getAttribute('data-idx'), 10);
+            mainImg.src = images[idx];
+          });
+        });
+
+        // Variants
+        const variantsGrid = document.getElementById('pdpVariantsGrid');
+        let selectedVariant = product.variants?.[0] || { id: product.id + '_default', title: 'Standard', available: true };
+
+        if (product.variants && product.variants.length > 0) {
+          variantsGrid.innerHTML = product.variants.map((v, idx) => `
+            <button 
+              type="button" 
+              class="pdp-variant-pill ${idx === 0 ? 'is-selected' : ''} ${!v.available ? 'is-sold-out' : ''}"
+              data-id="${v.id}"
+              data-title="${v.title}"
+              ${!v.available ? 'disabled' : ''}
+            >
+              ${v.title}
+            </button>
+          `).join('');
+
+          variantsGrid.querySelectorAll('.pdp-variant-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+              variantsGrid.querySelectorAll('.pdp-variant-pill').forEach(p => p.classList.remove('is-selected'));
+              pill.classList.add('is-selected');
+              const vId = pill.getAttribute('data-id');
+              selectedVariant = product.variants.find(v => v.id === vId) || selectedVariant;
+            });
+          });
+        } else {
+          document.getElementById('pdpVariantGroup').style.display = 'none';
+        }
+
+        // Quantity Stepper
+        let quantity = 1;
+        const qtyVal = document.getElementById('pdpQtyVal');
+        document.getElementById('pdpQtyDec').addEventListener('click', () => {
+          if (quantity > 1) {
+            quantity--;
+            qtyVal.textContent = quantity;
+          }
+        });
+        document.getElementById('pdpQtyInc').addEventListener('click', () => {
+          quantity++;
+          qtyVal.textContent = quantity;
+        });
+
+        // Add to Bag Button
+        document.getElementById('pdpAddToCartBtn').addEventListener('click', () => {
+          cart.addItem(product, selectedVariant.id, quantity, selectedVariant.title);
+        });
+
+        // Related Products Grid (Show other products from collection)
+        const relatedGrid = document.getElementById('relatedProductGrid');
+        const related = MOCK_PRODUCTS.filter(p => p.id !== product.id).slice(0, 4);
+        relatedGrid.innerHTML = related.map(p => renderProductCard(p, '../')).join('');
+      }
+
+      initPDP();
+    </script>
+  </body>
+</html>
