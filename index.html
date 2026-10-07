@@ -303,92 +303,7 @@
         </div>
       </section>
 
-      <!-- ======================================================================
-           SECTION 4: INTERACTIVE CENTERPIECE — THE ANATOMY OF HIGH CALIBER
-           ====================================================================== -->
-      <section class="anatomy-section" aria-label="Craftsmanship Anatomy Explorer" style="padding: 8rem 0;">
-        <div class="container">
-          <header class="section-header" style="margin-bottom: 3.5rem;">
-            <span class="section-kicker">Master Bootmaker Standards</span>
-            <h2 class="section-title">THE ANATOMY OF HIGH CALIBER</h2>
-            <p class="section-subtitle">Click each glowing marker to inspect how our boots are built from the core outward.</p>
-            <img src="./assets/images/textures/western-divider.svg" alt="" class="western-divider" />
-          </header>
 
-          <div class="anatomy-grid" style="gap: 4rem;">
-            
-            <!-- Left: Interactive Stage with Boot & Hotspots -->
-            <div class="anatomy-stage">
-              <div class="anatomy-stage-image-wrap">
-                <img 
-                  src="https://cdn.shopify.com/s/files/1/0962/6438/8923/files/0_17d0cf48-4b3e-4cbc-b44e-bdc3e0c155e8.jpg?v=1783537912" 
-                  alt="High Caliber Boot Anatomy Diagram" 
-                  class="anatomy-boot-img" 
-                  id="anatomyBootImg" 
-                />
-
-                <!-- Hotspot 1: Caiman Vamp -->
-                <button type="button" class="anatomy-pin is-active" style="top: 72%; left: 28%;" data-hotspot="1" aria-label="Hotspot 1: Caiman Belly Vamp">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">1</span>
-                </button>
-
-                <!-- Hotspot 2: Lemonwood Pegs -->
-                <button type="button" class="anatomy-pin" style="top: 75%; left: 52%;" data-hotspot="2" aria-label="Hotspot 2: Lemonwood Pegged Inseam">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">2</span>
-                </button>
-
-                <!-- Hotspot 3: Goodyear Welt -->
-                <button type="button" class="anatomy-pin" style="top: 84%; left: 38%;" data-hotspot="3" aria-label="Hotspot 3: 3/4 Goodyear Leather Welt">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">3</span>
-                </button>
-
-                <!-- Hotspot 4: Tempered Steel Shank -->
-                <button type="button" class="anatomy-pin" style="top: 68%; left: 58%;" data-hotspot="4" aria-label="Hotspot 4: Triple-Ribbed Steel Shank">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">4</span>
-                </button>
-
-                <!-- Hotspot 5: Hand-Corded Shaft -->
-                <button type="button" class="anatomy-pin" style="top: 32%; left: 55%;" data-hotspot="5" aria-label="Hotspot 5: Hand-Corded Shaft Embroidery">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">5</span>
-                </button>
-
-                <!-- Hotspot 6: Channeled Insole -->
-                <button type="button" class="anatomy-pin" style="top: 60%; left: 45%;" data-hotspot="6" aria-label="Hotspot 6: Channeled Vegetable Insole">
-                  <span class="pin-pulse"></span>
-                  <span class="pin-core">6</span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Right: Dynamic Details Panel -->
-            <div class="anatomy-detail-card" id="anatomyDetailCard">
-              <span class="anatomy-card-number" id="anatomyCardNum">HOTSPOT 01 / 06</span>
-              <h3 class="anatomy-card-title" id="anatomyCardTitle">Grade-A Caiman Belly Vamp</h3>
-              <p class="anatomy-card-desc" id="anatomyCardDesc">
-                Every exotic vamp is hand-selected and grain-matched across both boots. We cut exclusively from the supple belly tiles of genuine South American caiman, preserving natural membrane elasticity while delivering mesmerizing glazed geometry.
-              </p>
-              <div class="anatomy-benefit-box" id="anatomyCardBenefit">
-                <strong>Why It Matters:</strong> Symmetry across pairs is the true hallmark of master bootmaking. Machine-stamped prints cannot match the tactile thermal response of true glazed scales.
-              </div>
-
-              <div class="anatomy-hotspot-nav">
-                <button type="button" class="anatomy-nav-chip is-active" data-hotspot="1">1. Caiman Vamp</button>
-                <button type="button" class="anatomy-nav-chip" data-hotspot="2">2. Lemonwood Pegs</button>
-                <button type="button" class="anatomy-nav-chip" data-hotspot="3">3. Goodyear Welt</button>
-                <button type="button" class="anatomy-nav-chip" data-hotspot="4">4. Steel Shank</button>
-                <button type="button" class="anatomy-nav-chip" data-hotspot="5">5. Corded Shaft</button>
-                <button type="button" class="anatomy-nav-chip" data-hotspot="6">6. Leather Insole</button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       <!-- ======================================================================
            SECTION 5: EXOTIC COLLECTION SPOTLIGHT BANNER (AIRY VISUAL RESPITE)
@@ -804,80 +719,6 @@
 
       // (Featured / New Arrivals / Promotions are rendered from Shopify by /assets/js/storefront.js)
 
-      // 2. Interactive Anatomy Hotspot Controller
-      const anatomyData = {
-        1: {
-          num: "HOTSPOT 01 / 06",
-          title: "Grade-A Caiman Belly Vamp",
-          desc: "Every exotic vamp is hand-selected and grain-matched across both boots. We cut exclusively from the supple belly tiles of genuine South American caiman, preserving natural membrane elasticity while delivering mesmerizing glazed geometry.",
-          benefit: "Symmetry across pairs is the true hallmark of master bootmaking. Machine-stamped prints cannot match the tactile thermal response of true glazed scales."
-        },
-        2: {
-          num: "HOTSPOT 02 / 06",
-          title: "Lemonwood Pegged Inseam",
-          desc: "We drive 32 to 44 carved lemonwood pegs by hand into each waist. Unlike metal nails which rust and tear through leather when wet, lemonwood shrinks and swells in tandem with the sole leather, permanently locking the waist to the shank.",
-          benefit: "Provides indestructible arch resilience without metal corrosion, keeping the waist tight and sculpted for decades."
-        },
-        3: {
-          num: "HOTSPOT 03 / 06",
-          title: "3/4 Goodyear Leather Welt",
-          desc: "Constructed with a heavy 3/4 Goodyear welt stitched with lockstitch thread. The Goodyear welt allows our boots to be completely recrafted, resoled, and rebuilt for a lifetime of hard ranch and street wear.",
-          benefit: "100% recraftable. When you wear through the leather sole, our bootmakers can resole the boot without disturbing the original upper."
-        },
-        4: {
-          num: "HOTSPOT 04 / 06",
-          title: "Triple-Ribbed Tempered Steel Shank",
-          desc: "A custom heat-tempered steel shank reinforced with three longitudinal ribs is set into the arch bridge. This provides absolute torsional stability whether you're standing in stirrups, ascending a ladder, or walking asphalt.",
-          benefit: "Eliminates foot fatigue and arch collapse over long 14-hour days."
-        },
-        5: {
-          num: "HOTSPOT 05 / 06",
-          title: "Hand-Corded 10-Row Shaft",
-          desc: "Intricate multi-row stitching corded with high-tenacity thread through supple calfskin. The corded stitch is not merely aesthetic—it provides structural tension that keeps the boot shaft upright without leather slouching.",
-          benefit: "Preserves the proud, erect Western silhouette over years of wear while fitting cleanly under jeans."
-        },
-        6: {
-          num: "HOTSPOT 06 / 06",
-          title: "Channeled Leather Insole",
-          desc: "A solid slab of vegetable-tanned steerhide channeled to receive the welt. Beneath it lies a bed of ground natural cork that molds to your unique foot impression after just 20 hours of wear.",
-          benefit: "Creates a truly custom orthotic bed crafted entirely from breathable natural materials."
-        }
-      };
-
-      function initAnatomyExplorer() {
-        const pins = document.querySelectorAll('.anatomy-pin');
-        const chips = document.querySelectorAll('.anatomy-nav-chip');
-        const numEl = document.getElementById('anatomyCardNum');
-        const titleEl = document.getElementById('anatomyCardTitle');
-        const descEl = document.getElementById('anatomyCardDesc');
-        const benefitEl = document.getElementById('anatomyCardBenefit');
-
-        function selectHotspot(id) {
-          const item = anatomyData[id];
-          if (!item) return;
-
-          pins.forEach(p => p.classList.toggle('is-active', p.getAttribute('data-hotspot') === id));
-          chips.forEach(c => c.classList.toggle('is-active', c.getAttribute('data-hotspot') === id));
-
-          numEl.textContent = item.num;
-          titleEl.textContent = item.title;
-          descEl.textContent = item.desc;
-          benefitEl.innerHTML = `<strong>Why It Matters:</strong> ${item.benefit}`;
-        }
-
-        pins.forEach(pin => {
-          pin.addEventListener('click', () => {
-            selectHotspot(pin.getAttribute('data-hotspot'));
-          });
-        });
-
-        chips.forEach(chip => {
-          chip.addEventListener('click', () => {
-            selectHotspot(chip.getAttribute('data-hotspot'));
-          });
-        });
-      }
-
       // Scores live boot products against the finder answers using the product's own
       // title / tags / type / description (no product data is hardcoded here).
       const FINDER_KEYWORDS = {
@@ -998,7 +839,6 @@
           showStep(1);
         });
       }
-      initAnatomyExplorer();
       initBootFinder();
     </script>
   </body>

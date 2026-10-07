@@ -105,6 +105,16 @@
     gap: 1.5rem;
   }
 
+  .collection-controls-bar {
+    position: sticky !important;
+    top: 68px !important;
+    z-index: 95 !important;
+    background-color: #0e0d0c !important;
+    border-bottom: 1px solid rgba(199, 164, 119, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75) !important;
+    padding: 0.65rem 0 !important;
+  }
+
   .category-card {
     height: 360px;
   }
@@ -390,25 +400,55 @@
     border-bottom: none;
   }
 
+  .collection-controls-bar {
+    position: sticky !important;
+    top: 64px !important;
+    z-index: 95 !important;
+    background-color: #0e0d0c !important;
+    border-bottom: 1px solid rgba(199, 164, 119, 0.25) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75) !important;
+    padding: 0.55rem 0 !important;
+  }
+
   .controls-inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.5rem !important;
+    flex-wrap: nowrap !important;
   }
 
   .filters-row {
-    width: 100%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 0.5rem;
+    flex: 1 1 auto !important;
+    width: auto !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 0 !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   .filter-select, .sort-select {
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
   }
 
   .collection-stats {
-    justify-content: space-between;
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    gap: 0.5rem !important;
+  }
+
+  .product-count-display {
+    display: none !important;
+  }
+
+  .sort-select {
+    padding: 0.45rem 1.8rem 0.45rem 0.65rem !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    background-color: var(--color-bg-elevated) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 1px !important;
   }
 
   .newsletter-form {
