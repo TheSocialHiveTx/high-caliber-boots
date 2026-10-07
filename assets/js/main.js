@@ -10,8 +10,7 @@
  * - Newsletter Capture
  */
 
-import { MOCK_PRODUCTS } from './mock-products.js';
-import { getRelativeBasePath } from './products.js';
+import { searchProducts, isShopifyConfigured, productLink, SITE_ROOT, FALLBACK_IMAGE, formatMoney } from './shopify-api.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initAnnouncementBar();
@@ -139,7 +138,19 @@ function initSearchModal() {
   if (searchTriggers.length === 0) return;
 
   let modal = document.getElementById('globalSearchModal');
-  const basePath = getRelativeBasePath();
+
+  const suggestionsHTML = `
+    <div class="search-suggestions">
+      <span class="suggestion-label">POPULAR SEARCHES:</span>
+      <div class="suggestion-chips">
+        <button type="button" class="search-chip" data-term="boots">Boots</button>
+        <button type="button" class="search-chip" data-term="jacket">Jackets</button>
+        <button type="button" class="search-chip" data-term="belt">Belts</button>
+        <button type="button" class="search-chip" data-term="cologne">Cologne</button>
+        <button type="button" class="search-chip" data-term="glasses">Glasses</button>
+      </div>
+    </div>
+  `;
 
   if (!modal) {
     modal = document.createElement('div');
@@ -151,31 +162,22 @@ function initSearchModal() {
     modal.innerHTML = `
       <div class="search-modal-card">
         <div class="search-input-wrap">
-          <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input 
-            type="search" 
-            id="globalSearchInput" 
-            class="search-input" 
-            placeholder="Search caiman, crocodile, ostrich, roper, work..." 
+          <input
+            type="search"
+            id="globalSearchInput"
+            class="search-input"
+            placeholder="Search boots, clothing, accessories..."
             autocomplete="off"
             aria-label="Search High Caliber"
           />
           <button type="button" class="search-close-btn" id="closeSearchModalBtn" aria-label="Close search">&times;</button>
         </div>
-        <div class="search-results-container" id="searchResultsContainer">
-          <div class="search-suggestions">
-            <span class="suggestion-label">POPULAR INQUIRIES:</span>
-            <div class="suggestion-chips">
-              <button type="button" class="search-chip" data-term="caiman">Caiman Belly</button>
-              <button type="button" class="search-chip" data-term="steel toe">Steel Toe</button>
-              <button type="button" class="search-chip" data-term="ostrich">Ostrich</button>
-              <button type="button" class="search-chip" data-term="buckaroo">Buckaroo</button>
-              <button type="button" class="search-chip" data-term="denim">Sawtooth Denim</button>
-            </div>
-          </div>
+        <div class="search-results-container" id="searchResultsContainer" aria-live="polite">
+          ${suggestionsHTML}
         </div>
       </div>
     `;
@@ -196,6 +198,7 @@ function initSearchModal() {
     modal.classList.remove('is-open');
     document.body.classList.remove('search-open-scroll-lock');
     input.value = '';
+    resultsContainer.innerHTML = suggestionsHTML;
   };
 
   searchTriggers.forEach(btn => {
@@ -209,71 +212,78 @@ function initSearchModal() {
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeSearch();
   });
-
-  modal.querySelectorAll('.search-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      input.value = chip.getAttribute('data-term');
-      input.dispatchEvent(new Event('input'));
-    });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) closeSearch();
   });
 
+  // Delegated so the chips keep working after results are re-rendered
+  resultsContainer.addEventListener('click', (e) => {
+    const chip = e.target.closest('.search-chip');
+    if (!chip) return;
+    input.value = chip.getAttribute('data-term');
+    input.dispatchEvent(new Event('input'));
+  });
+
+  // Live catalog search through the Shopify Storefront API (debounced)
+  let timer = null;
+  let requestId = 0;
+
   input.addEventListener('input', () => {
-    const query = input.value.trim().toLowerCase();
+    clearTimeout(timer);
+    const query = input.value.trim();
+
     if (!query) {
-      resultsContainer.innerHTML = `
-        <div class="search-suggestions">
-          <span class="suggestion-label">POPULAR INQUIRIES:</span>
-          <div class="suggestion-chips">
-            <button type="button" class="search-chip" data-term="caiman">Caiman Belly</button>
-            <button type="button" class="search-chip" data-term="steel toe">Steel Toe</button>
-            <button type="button" class="search-chip" data-term="ostrich">Ostrich</button>
-            <button type="button" class="search-chip" data-term="buckaroo">Buckaroo</button>
-            <button type="button" class="search-chip" data-term="denim">Sawtooth Denim</button>
-          </div>
-        </div>
-      `;
-      modal.querySelectorAll('.search-chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-          input.value = chip.getAttribute('data-term');
-          input.dispatchEvent(new Event('input'));
-        });
-      });
+      resultsContainer.innerHTML = suggestionsHTML;
       return;
     }
 
-    const matches = MOCK_PRODUCTS.filter(p => {
-      return p.title.toLowerCase().includes(query) ||
-             (p.vendor && p.vendor.toLowerCase().includes(query)) ||
-             (p.productType && p.productType.toLowerCase().includes(query)) ||
-             (p.material && p.material.toLowerCase().includes(query)) ||
-             (p.toeShape && p.toeShape.toLowerCase().includes(query)) ||
-             (p.tags && p.tags.some(t => t.toLowerCase().includes(query)));
-    });
-
-    if (matches.length === 0) {
+    if (!isShopifyConfigured()) {
       resultsContainer.innerHTML = `
         <div class="search-no-results">
-          <p>No products found matching "<strong>${escapeHtml(query)}</strong>".</p>
-          <a href="${basePath}shop/" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">VIEW FULL CATALOG</a>
+          <p>Search will be available as soon as the online store is connected.</p>
+          <a href="${SITE_ROOT}contact/" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">CONTACT US</a>
         </div>
       `;
       return;
     }
 
-    resultsContainer.innerHTML = `
-      <div class="search-results-list">
-        ${matches.map(p => `
-          <a href="${basePath}product/?handle=${p.handle}" class="search-result-item">
-            <img src="${basePath}${p.images[0]}" alt="${p.title}" class="search-result-thumb" />
-            <div class="search-result-details">
-              <span class="search-result-vendor">${p.vendor || 'High Caliber'}</span>
-              <h4 class="search-result-title">${p.title}</h4>
-              <span class="search-result-price tabular-nums">$${p.price.toFixed(2)}</span>
+    timer = setTimeout(async () => {
+      const myRequest = ++requestId;
+      resultsContainer.innerHTML = `<div class="search-no-results"><p>Searching...</p></div>`;
+      try {
+        const matches = await searchProducts(query);
+        if (myRequest !== requestId) return; // a newer search superseded this one
+
+        if (matches.length === 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-no-results">
+              <p>No products found matching "<strong>${escapeHtml(query)}</strong>".</p>
+              <a href="${SITE_ROOT}shop/" class="btn btn-secondary btn-sm" style="margin-top: 1rem;">VIEW FULL CATALOG</a>
             </div>
-          </a>
-        `).join('')}
-      </div>
-    `;
+          `;
+          return;
+        }
+
+        resultsContainer.innerHTML = `
+          <div class="search-results-list">
+            ${matches.map(p => `
+              <a href="${productLink(p.handle)}" class="search-result-item">
+                <img src="${escapeHtml(p.images[0]?.url || FALLBACK_IMAGE)}" alt="" class="search-result-thumb" />
+                <div class="search-result-details">
+                  ${p.vendor ? `<span class="search-result-vendor">${escapeHtml(p.vendor)}</span>` : ''}
+                  <h4 class="search-result-title">${escapeHtml(p.title)}</h4>
+                  <span class="search-result-price tabular-nums">${escapeHtml(formatMoney(p.price, p.currency))}</span>
+                </div>
+              </a>
+            `).join('')}
+          </div>
+        `;
+      } catch (err) {
+        if (myRequest !== requestId) return;
+        console.warn('[High Caliber Search]', err);
+        resultsContainer.innerHTML = `<div class="search-no-results" role="alert"><p>Search is temporarily unavailable. Please try again.</p></div>`;
+      }
+    }, 250);
   });
 }
 

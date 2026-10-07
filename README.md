@@ -1,110 +1,59 @@
-# HIGH CALIBER BOOTS — Front-End Storefront Architecture
+# High Caliber — Headless Shopify Storefront (GitHub Pages)
 
-Production-ready, bespoke static front end for **High Caliber Boots**, designed with an unapologetic dark Western aesthetic, tactile leather material language, and headless commerce integration anticipating the **Shopify Storefront API**.
-
----
-
-## 1. Commerce Architecture
-
-High Caliber operates on a modern decoupled headless architecture:
+A static storefront in plain HTML, CSS and JavaScript. **Shopify is the commerce backend** (products, prices, inventory, cart, checkout); this site is the customer-facing frontend. There is no build step, no framework and no Shopify theme.
 
 ```
-High Caliber Shopify Admin
-        ↓
-Products, Variants, Collections & Inventory
-        ↓
-Shopify Storefront API (GraphQL)
-        ↓
-High Caliber Static Website (HTML5, Modern CSS, Vanilla JS)
-        ↓
-Interactive Slide-Out Cart
-        ↓
-Shopify Hosted 256-Bit SSL Checkout
+Shopify (Storefront API, public token) → static pages on GitHub Pages → Shopify-hosted checkout
 ```
 
-### Storefront API Configuration
-The Shopify integration layer is cleanly isolated in `/assets/js/shopify.js`. 
-To connect a live Shopify store:
-1. Open `/assets/js/shopify.js`.
-2. Replace `SHOPIFY_CONFIG.storeDomain` with your myshopify domain (e.g., `high-caliber-boots.myshopify.com`).
-3. Replace `SHOPIFY_CONFIG.storefrontAccessToken` with your public Storefront API token.
-4. The application will automatically switch from the development mock dataset to live GraphQL collection and product queries.
+## The 8 primary pages (locked)
 
-> **Security Mandate:** Never insert Shopify Admin API private tokens into client-side JavaScript. Only public Storefront Access Tokens are supported.
+| Page | Path | Shopify data |
+|---|---|---|
+| Home | `/` | Featured, New Arrivals, Promotions |
+| Shop | `/shop/` | Entire catalog (no "Shop" collection needed) |
+| Boots | `/boots/` | `boots` + tabs: Men's Boots, Women's Boots |
+| Clothing | `/clothing/` | `clothing` + tabs: T-Shirts, Leather Jackets, Sweaters, Women's Clothing |
+| Accessories | `/accessories/` | `accessories` + tabs: Belts & Buckles, Cologne, Glasses, Cowboy Hats, Western Jewelry |
+| About Us | `/about/` | none |
+| Contact Us | `/contact/` | none |
+| FAQ / Shipping & Returns | `/faq/` | none |
 
----
+Categories are **tabs inside a page**, never extra pages. Product details open in an in-page dialog (deep link: `/boots/#product=<handle>`). A category tab is hidden automatically while its collection handle is blank, missing or has no products, so future categories (Women's Boots, Cowboy Hats, Women's Clothing, Western Jewelry) appear on their own once products are added in Shopify.
 
-## 2. Directory Structure
+## Files
 
 ```
-/
-├── index.html                   # High Caliber Homepage (All 9 sections)
-├── shop/
-│   └── index.html               # Shop All Catalog with Faceted Filters
-├── boots/
-│   ├── index.html               # All Boots Overview
-│   ├── exotic/
-│   │   └── index.html           # Exotic Leather Boots (Caiman, Crocodile, Ostrich, Stingray)
-│   ├── western/
-│   │   └── index.html           # Traditional Western & Buckaroo Boots
-│   └── work/
-│       └── index.html           # ASTM Safety Steel & Composite Work Boots
-├── clothing/
-│   └── index.html               # Ranch Shirts, Denim, & Waxed Coats
-├── fr-clothing/
-│   └── index.html               # Certified NFPA 2112 & CAT 2 Flame Resistant Workwear
-├── accessories/
-│   └── index.html               # Hand-Tooled Floral Leather Belts & Gear
-├── about/
-│   └── index.html               # High Caliber Story & Craftsmanship Principles
-├── contact/
-│   └── index.html               # Customer Support & Inquiries
-├── faq/
-│   └── index.html               # FAQ, Sizing Guides, Shipping, & Returns
-├── product/
-│   └── index.html               # Reusable Product Detail Template (PDP)
-│
-├── assets/
-│   ├── css/
-│   │   ├── styles.css           # Modern CSS System, Color Tokens, Components
-│   │   └── responsive.css       # Mobile-first Breakpoints (375px to 1440px+)
-│   ├── js/
-│   │   ├── main.js              # Header Scroll, Mobile Drawer, Search, Accordions
-│   │   ├── products.js          # Reusable Product Card & Grid Renderer
-│   │   ├── mock-products.js     # Isolated Development Catalog (16 items)
-│   │   ├── shopify.js           # Shopify Storefront API GraphQL Client
-│   │   └── cart.js              # Persistent Client Cart & Drawer Controller
-│   └── images/
-│       ├── branding/            # Logo & Monogram SVGs
-│       ├── textures/            # Caiman Scale & Western Filigree Dividers
-│       ├── hero/                # Section Backdrops & Editorial Graphics
-│       ├── categories/          # Category Editorial Illustrations
-│       └── products/            # Primary & Secondary Product Views (32 SVGs)
-└── README.md
+assets/js/
+  shopify-config.js   ← the ONLY file you edit to connect Shopify (domain, token, version, collection handles)
+  shopify-api.js      GraphQL transport, catalog/collection/product queries, variants, Cart API, checkout redirect
+  products.js         the single product card + product dialog (used by every page)
+  cart.js             sitewide cart drawer on the Shopify Cart API (persistent cart ID in localStorage)
+  storefront.js       page controllers (Home / Shop / Boots / Clothing / Accessories)
+  main.js             header, mobile nav, search (live Storefront search), accordions, newsletter UI
 ```
 
----
+Each commerce page declares `<body data-page="home|shop|boots|clothing|accessories">`.
 
-## 3. Brand & Visual System
+## Going live — what you must provide
 
-- **Primary Background:** `#090909` (Deep Charcoal Black)
-- **Secondary Background:** `#111111`
-- **Elevated Card Surfaces:** `#181716`
-- **Warm Dark Brown:** `#211A15`
-- **Weathered Bronze:** `#806247`
-- **Leather Brown:** `#9A542E`
-- **Rust Accent:** `#A54B25` (Industrial & Safety Accents)
-- **Warm Tan:** `#C7A477` (Primary Western Metallic Accent)
-- **Off-White:** `#F1EDE6` (Headings & Typography)
-- **Borders:** `rgba(199, 164, 119, 0.20)`
-- **Typography:** `Cinzel` for editorial Western headings paired with clean `Plus Jakarta Sans` for body legibility.
+1. **Store domain** → `domain` (`your-store.myshopify.com`).
+2. **Storefront API public access token** → `storefrontToken`. Create it via Shopify admin → *Settings → Apps and sales channels → Develop apps* (or the Headless channel). Enable Storefront scopes: read products/listings, read inventory (optional), and the cart/checkout scopes. **Never** use an Admin API token here.
+3. **API version** → confirm `apiVersion` is currently supported (quarterly releases).
+4. **Collection handles** → in Shopify create the collections below and paste each *handle* (the URL slug) into `collections`. A product can be in many collections (a men's boot belongs to `boots` **and** `mensBoots`).
 
----
+   Boots, Men's Boots, Women's Boots · Clothing, T-Shirts, Leather Jackets, Sweaters, Women's Clothing · Accessories, Belts & Buckles, Cologne, Glasses, Cowboy Hats, Western Jewelry · Featured, New Arrivals · (optional) Promotions.
 
-## 4. Hosting & Deployment
+   The existing *Boots / Women Wear / Men Wear* collections do not drive the frontend; only the handles you enter do.
+5. **Publish products and collections to the sales channel that owns the token** (Online Store / Headless), otherwise the Storefront API will not return them.
+6. Set shipping, taxes, payments and the discount code(s) in Shopify. Discount codes entered in the cart are validated by Shopify.
 
-The codebase is built entirely with semantic HTML5, modern CSS, and vanilla ES modules using relative path resolution. It runs identically on:
-- **GitHub Pages**
-- **Cloudflare Pages / Vercel / Netlify**
-- **Amazon S3 / Google Cloud Storage**
-- **Standard Apache / Nginx web servers**
+Until steps 1–2 are filled in, pages show a friendly "catalog is being stocked" state, the cart is inactive, and nothing is faked.
+
+## Security
+
+Only the public Storefront token lives in the browser. Admin API tokens, API secret keys and client secrets must never be committed. Checkout is Shopify-hosted; no payment data touches this site. Operations that need privileged access (e.g. real newsletter signup storage, order lookup/customer accounts, inventory counts beyond what the Storefront API exposes) cannot be done safely from GitHub Pages and need Shopify Forms/Email, Shopify customer accounts, or a small serverless proxy.
+
+## Deploy
+
+Push to GitHub and enable Pages for the branch root. All internal URLs are resolved from the script location, so it works on a custom domain or on a `/<repo-name>/` project site. Update the `https://highcaliberboots.com` canonical/Open Graph URLs if your final domain differs.

@@ -318,24 +318,52 @@ p {
   justify-content: space-between;
   height: var(--header-height);
   position: relative;
+  min-height: 110px;
 }
 
 /* Zone 1: Brand Wordmark */
 .header-brand {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 42px);
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  pointer-events: auto;
+  overflow: visible;
+}
+
+.header-brand::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 170%;
+  height: 170%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 28%, rgba(0, 0, 0, 0.38) 52%, rgba(0, 0, 0, 0) 78%);
+  filter: blur(22px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .header-logo {
-  height: 48px;
+  position: relative;
+  z-index: 1;
+  height: clamp(78px, 6.5vw, 130px);
   width: auto;
-  max-width: 330px;
-  transition: opacity var(--transition-fast);
+  max-width: 300px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.38));
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .header-logo:hover {
-  opacity: 0.92;
+  opacity: 0.96;
+  transform: translateY(-2px);
 }
 
 /* Zone 2: Desktop Navigation Links */
@@ -428,6 +456,10 @@ p {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+
+.about-header-link {
+  margin-right: 0.15rem;
 }
 
 .utility-btn {
@@ -594,27 +626,45 @@ p {
 /* SECTION 1: HERO */
 .hero-section {
   position: relative;
-  min-height: 88vh;
+  width: 100%;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-primary);
-  background-image: url('../images/hero/hero-bg.svg');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  background: #070605;
   border-bottom: 1px solid var(--color-border);
+  isolation: isolate;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.85;
+  filter: contrast(1.05) brightness(0.8);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg, 
-    rgba(7, 6, 5, 0.98) 0%, 
-    rgba(7, 6, 5, 0.85) 45%, 
-    rgba(7, 6, 5, 0.35) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 6, 5, 0.8) 0%,
+      rgba(7, 6, 5, 0.7) 28%,
+      rgba(7, 6, 5, 0.42) 52%,
+      rgba(7, 6, 5, 0.28) 72%,
+      rgba(7, 6, 5, 0.6) 100%
+    );
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
@@ -3190,14 +3240,10 @@ body.search-open-scroll-lock {
 /* --- Hero Section Elevation --- */
 .hero-section {
   position: relative;
-  min-height: 92vh;
+  width: 100%;
+  min-height: 80vh;
   display: flex;
   align-items: center;
-  background-color: #070706;
-  background-image: linear-gradient(to right, rgba(7, 7, 6, 0.94) 0%, rgba(7, 7, 6, 0.78) 50%, rgba(7, 7, 6, 0.35) 100%), url('https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=2000&q=90');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
   border-bottom: 1px solid var(--color-border);
   overflow: hidden;
 }
@@ -3206,7 +3252,7 @@ body.search-open-scroll-lock {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 75% 35%, rgba(199, 164, 119, 0.12) 0%, transparent 60%);
+  background: rgba(0, 0, 0, 0.08);
   pointer-events: none;
 }
 
@@ -4132,3 +4178,73 @@ body.search-open-scroll-lock {
   }
 }
 
+
+/* ==========================================================================
+   SHOPIFY STOREFRONT LAYER (added with the headless commerce integration)
+   Uses existing design tokens; no existing rules were changed.
+   ========================================================================== */
+
+[hidden] { display: none !important; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Category / source tabs (Boots, Clothing, Accessories, Home) */
+.showcase-tabs-nav { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.showcase-tab {
+  appearance: none; background: transparent; cursor: pointer;
+  font: inherit; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--color-muted-text, #a39c90);
+  border: 1px solid var(--color-border, rgba(199, 164, 119, 0.2));
+  padding: 0.65rem 1.15rem; border-radius: 1px;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.showcase-tab:hover { color: var(--color-warm-tan, #C7A477); border-color: var(--color-warm-tan, #C7A477); }
+.showcase-tab:focus-visible { outline: 2px solid var(--color-warm-tan, #C7A477); outline-offset: 2px; }
+.showcase-tab.is-active {
+  color: #090909; background-color: var(--color-warm-tan, #C7A477); border-color: var(--color-warm-tan, #C7A477);
+}
+
+/* Loading / error states */
+.collection-loading-state {
+  grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; gap: 1rem;
+  padding: 5rem 1rem; color: var(--color-muted-text, #a39c90); text-align: center;
+}
+.loading-spinner {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 2px solid rgba(199, 164, 119, 0.25); border-top-color: var(--color-warm-tan, #C7A477);
+  animation: hc-spin 0.8s linear infinite;
+}
+@keyframes hc-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .loading-spinner { animation-duration: 2.4s; } }
+.collection-empty-state { grid-column: 1 / -1; }
+.collection-error-state .empty-title { color: #d98b6a; }
+.category-noscript { grid-column: 1 / -1; color: var(--color-muted-text, #a39c90); }
+
+/* Product card additions */
+.product-card.is-sold-out .product-image { opacity: 0.55; }
+.product-badge-sold-out { background-color: #3a3631; color: #e9e2d6; }
+.product-availability { margin: 0.35rem 0 0.9rem; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+.product-availability.is-in-stock { color: #8fb07a; }
+.product-availability.is-out-of-stock { color: #d98b6a; }
+.product-card-cta { width: 100%; }
+.cart-item-was { margin-left: 0.4rem; opacity: 0.6; font-size: 0.85em; }
+.qv-in-stock-tag.is-out { color: #d98b6a; }
+.qv-size-pill:focus-visible, .qv-thumb-btn:focus-visible { outline: 2px solid var(--color-warm-tan, #C7A477); outline-offset: 2px; }
+.qv-modal-card:focus { outline: none; }
+
+/* Cart drawer: error + busy states */
+.cart-error { margin: 0 1.25rem; padding: 0.7rem 0.9rem; font-size: 0.85rem; color: #f0c6b4; background: rgba(165, 75, 37, 0.18); border: 1px solid rgba(165, 75, 37, 0.5); }
+.cart-drawer.is-busy .cart-items, .cart-drawer.is-busy .cart-footer { opacity: 0.6; pointer-events: none; }
+
+/* Static category copy (SEO) under each product grid */
+.category-copy { padding: 3rem 0 4.5rem; }
+.category-copy .container { max-width: 860px; }
+.category-copy h2 {
+  font-family: var(--font-serif, Georgia, serif); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
+  font-size: 1.35rem; color: var(--color-cream, #f1ede6); margin: 0 0 1rem;
+}
+.category-copy p { color: var(--color-muted-text, #a39c90); line-height: 1.8; margin: 0; }
+.category-copy a { color: var(--color-warm-tan, #C7A477); text-decoration: underline; }

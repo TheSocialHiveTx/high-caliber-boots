@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop All | High Caliber Boots &amp; Western Outfitters</title>
-    <meta name="description" content="Browse the full High Caliber collection: exotic boots, handcrafted Western boots, ASTM safety work boots, ranch apparel, and leather accessories." />
+    <title>Shop All Products | High Caliber Boots &amp; Western Outfitters</title>
+    <meta name="description" content="Shop the complete High Caliber catalog: western boots, clothing and accessories with live pricing and availability." />
     
     <link rel="canonical" href="https://highcaliberboots.com/shop/" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://highcaliberboots.com/shop/" />
     <meta property="og:site_name" content="High Caliber Boots" />
-    <meta property="og:title" content="Shop All | High Caliber Boots &amp; Western Outfitters" />
-    <meta property="og:description" content="Browse the full High Caliber collection: exotic boots, handcrafted Western boots, ASTM safety work boots, ranch apparel, and leather accessories." />
-    <meta property="og:image" content="../assets/images/branding/logo.svg" />
+    <meta property="og:title" content="Shop All Products | High Caliber Boots &amp; Western Outfitters" />
+    <meta property="og:description" content="Shop the complete High Caliber catalog: western boots, clothing and accessories with live pricing and availability." />
+    <meta property="og:image" content="https://highcaliberboots.com/assets/images/branding/logo.png" />
     
     <link rel="icon" type="image/svg+xml" href="../assets/images/branding/monogram.svg" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
@@ -27,7 +28,7 @@
     }
     </script>
   </head>
-  <body>
+  <body data-page="shop">
 
     <!-- TOP LUXURY ANNOUNCEMENT MARQUEE BAR -->
     <div class="announcement-bar" role="region" aria-label="Store Announcement">
@@ -48,28 +49,19 @@
       <div class="container header-inner">
         <div class="header-brand">
           <a href="../" aria-label="High Caliber Boots Home">
-            <img src="../assets/images/branding/logo.svg" alt="High Caliber Boots" class="header-logo" width="320" height="48" />
+            <img src="../assets/images/branding/logo.png" alt="High Caliber Boots" class="header-logo" width="320" height="48" />
           </a>
         </div>
 
         <nav class="desktop-nav" aria-label="Main Navigation">
           <a href="../shop/" class="nav-link is-active">Shop</a>
-          <div class="nav-item-has-dropdown">
-            <a href="../boots/" class="nav-link">Boots</a>
-            <div class="dropdown-menu">
-              <a href="../boots/exotic/" class="dropdown-link">Exotic Boots</a>
-              <a href="../boots/western/" class="dropdown-link">Western Boots</a>
-              <a href="../boots/work/" class="dropdown-link">Work &amp; Safety Boots</a>
-              <a href="../boots/" class="dropdown-link">All Boots</a>
-            </div>
-          </div>
+          <a href="../boots/" class="nav-link">Boots</a>
           <a href="../clothing/" class="nav-link">Clothing</a>
-          <a href="../fr-clothing/" class="nav-link">FR Clothing</a>
           <a href="../accessories/" class="nav-link">Accessories</a>
-          <a href="../about/" class="nav-link">About</a>
         </nav>
 
         <div class="header-utility">
+          <a href="../about/" class="nav-link about-header-link">About</a>
           <button type="button" class="utility-btn" data-search-trigger aria-label="Search Catalog">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="11" cy="11" r="8"></circle>
@@ -105,25 +97,13 @@
     <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
     <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true" role="dialog" aria-label="Mobile Navigation">
       <div class="mobile-nav-header">
-        <img src="../assets/images/branding/logo.svg" alt="High Caliber" class="mobile-drawer-logo" />
+        <img src="../assets/images/branding/logo.png" alt="High Caliber" class="mobile-drawer-logo" />
         <button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
       </div>
       <ul class="mobile-nav-links">
         <li class="mobile-nav-item"><a href="../shop/" class="mobile-nav-link is-active">Shop All</a></li>
-        <li class="mobile-nav-item">
-          <a href="../boots/" class="mobile-nav-link">
-            <span>Boots</span>
-            <button type="button" class="mobile-nav-accordion-trigger" aria-label="Toggle Boots Submenu">+</button>
-          </a>
-          <ul class="mobile-nav-submenu">
-            <li><a href="../boots/exotic/" class="mobile-nav-sublink">Exotic Boots</a></li>
-            <li><a href="../boots/western/" class="mobile-nav-sublink">Western Boots</a></li>
-            <li><a href="../boots/work/" class="mobile-nav-sublink">Work &amp; Safety Boots</a></li>
-            <li><a href="../boots/" class="mobile-nav-sublink">View All Boots</a></li>
-          </ul>
-        </li>
+        <li class="mobile-nav-item"><a href="../boots/" class="mobile-nav-link">Boots</a></li>
         <li class="mobile-nav-item"><a href="../clothing/" class="mobile-nav-link">Clothing</a></li>
-        <li class="mobile-nav-item"><a href="../fr-clothing/" class="mobile-nav-link">FR Clothing</a></li>
         <li class="mobile-nav-item"><a href="../accessories/" class="mobile-nav-link">Accessories</a></li>
         <li class="mobile-nav-item"><a href="../about/" class="mobile-nav-link">About High Caliber</a></li>
         <li class="mobile-nav-item"><a href="../faq/" class="mobile-nav-link">FAQ &amp; Shipping</a></li>
@@ -138,8 +118,7 @@
 
     <main id="mainContent">
 
-      <!-- COLLECTION HERO -->
-      <section class="collection-hero" aria-label="Collection Overview">
+      <section class="collection-hero" aria-label="Shop Header">
         <div class="container">
           <nav class="breadcrumb-nav" aria-label="Breadcrumb">
             <a href="../">Home</a>
@@ -148,36 +127,32 @@
           </nav>
           <h1 class="collection-header-title">SHOP ALL PRODUCTS</h1>
           <p class="collection-header-desc">
-            Explore handcrafted exotic boots, authentic Western styles, certified jobsite safety boots, rugged apparel, and tooled leather goods.
+            The complete High Caliber catalog: <a href="../boots/">boots</a>, <a href="../clothing/">clothing</a> and <a href="../accessories/">accessories</a>, with live pricing and availability.
           </p>
         </div>
       </section>
 
-      <!-- COLLECTION CONTROLS (Faceted Filtering & Sorting) -->
+      <!-- FILTERS & SORT (filters are defined in the SHOP_FILTERS registry in /assets/js/storefront.js) -->
       <div class="collection-controls-bar">
         <div class="container controls-inner">
           <form class="filters-row" id="collectionFilters">
-            <label for="filterCategory" class="sr-only" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Category</label>
-            <select id="filterCategory" name="category" class="filter-select">
-              <option value="all">All Categories</option>
-              <option value="exotic-boots">Exotic Boots</option>
-              <option value="western-boots">Western Boots</option>
-              <option value="work-boots">Work Boots</option>
-              <option value="clothing">Clothing</option>
-              <option value="fr-clothing">FR Clothing</option>
-              <option value="accessories">Accessories</option>
+            <label for="filterProductType" class="sr-only">Product type</label>
+            <select id="filterProductType" name="productType" class="filter-select">
+              <option value="all">Type: All</option>
             </select>
 
-            <label for="filterToeShape" class="sr-only" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Toe Shape</label>
-            <select id="filterToeShape" name="toeShape" class="filter-select">
-              <option value="all">Toe Shape: All</option>
+            <label for="filterAvailability" class="sr-only">Availability</label>
+            <select id="filterAvailability" name="availability" class="filter-select">
+              <option value="all">Availability: All</option>
+              <option value="in-stock">In stock only</option>
             </select>
 
-            <label for="filterPrice" class="sr-only" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Price</label>
+            <label for="filterPrice" class="sr-only">Price</label>
             <select id="filterPrice" name="priceRange" class="filter-select">
               <option value="all">Price: All</option>
-              <option value="under-300">Under $300</option>
-              <option value="300-500">$300 to $500</option>
+              <option value="under-100">Under $100</option>
+              <option value="100-250">$100 to $250</option>
+              <option value="250-500">$250 to $500</option>
               <option value="over-500">Over $500</option>
             </select>
 
@@ -185,8 +160,8 @@
           </form>
 
           <div class="collection-stats">
-            <span class="product-count-display" id="productCount">Loading products...</span>
-            <label for="collectionSort" class="sr-only" style="position: absolute; width: 1px; height: 1px; overflow: hidden;">Sort by</label>
+            <span class="product-count-display" id="productCount" role="status" aria-live="polite">Loading...</span>
+            <label for="collectionSort" class="sr-only">Sort by</label>
             <select id="collectionSort" class="sort-select">
               <option value="featured">Sort: Featured</option>
               <option value="price-asc">Price: Low to High</option>
@@ -198,16 +173,15 @@
         </div>
       </div>
 
-      <!-- PRODUCT GRID -->
-      <section class="collection-grid-section" aria-label="Products">
+      <!-- PRODUCT GRID (complete catalog straight from Shopify) -->
+      <section class="collection-grid-section" aria-label="All products">
         <div class="container">
           <div class="product-grid" id="productGrid">
-            <!-- Dynamic Cards Loaded via products.js -->
+            <noscript><p class="category-noscript">Please enable JavaScript to browse our products, or <a href="../contact/">contact us</a> for help.</p></noscript>
           </div>
         </div>
       </section>
 
-      <!-- NEWSLETTER PROMO -->
       <section class="newsletter-section" aria-label="Newsletter Signup">
         <div class="container">
           <div class="newsletter-box">
@@ -294,7 +268,7 @@
         <!-- Col 1: Maison & Atelier Concierge -->
         <div class="footer-col brand-col">
           <a href="../" class="footer-brand-link" aria-label="High Caliber Boots Home">
-            <img src="../assets/images/branding/logo.svg" alt="High Caliber Boots" class="footer-logo" width="300" height="46" />
+            <img src="../assets/images/branding/logo.png" alt="High Caliber Boots" class="footer-logo" width="300" height="46" />
           </a>
           <p class="footer-brand-desc">
             Master hand-lasted Western bootmakers and Grade-A exotic leather outfitter. Handcrafted in small Texas bench batches with genuine lemonwood pegging and recraftable Goodyear welts.
@@ -319,13 +293,8 @@
         <div class="footer-col">
           <h3 class="footer-col-title">FOOTWEAR VAULT</h3>
           <ul class="footer-links">
-            <li><a href="../boots/exotic/">Exotic Caiman Boots</a></li>
-            <li><a href="../boots/exotic/">Nile Crocodile Ropers</a></li>
-            <li><a href="../boots/exotic/">Full-Quill Ostrich</a></li>
-            <li><a href="../boots/western/">Western Heritage Classics</a></li>
-            <li><a href="../boots/western/">American Bison Roughout</a></li>
-            <li><a href="../boots/work/">ASTM Steel Toe Work</a></li>
-            <li><a href="../boots/">View All Benchmarks &rarr;</a></li>
+            <li><a href="../boots/?category=mensBoots">Men&#39;s Boots</a></li>
+            <li><a href="../boots/">View All Boots &rarr;</a></li>
           </ul>
         </div>
 
@@ -333,12 +302,12 @@
         <div class="footer-col">
           <h3 class="footer-col-title">OUTFITTER &amp; APPAREL</h3>
           <ul class="footer-links">
-            <li><a href="../clothing/">Waxed Canvas Barn Coats</a></li>
-            <li><a href="../clothing/">Raw Indigo Sawtooth Shirts</a></li>
-            <li><a href="../fr-clothing/">NFPA 2112 FR Workwear</a></li>
-            <li><a href="../fr-clothing/">Arc-Rated Safety Utility</a></li>
-            <li><a href="../accessories/">Hand-Tooled Leather Belts</a></li>
-            <li><a href="../accessories/">Amber &amp; Smoke Cologne</a></li>
+            <li><a href="../clothing/?category=tshirts">T-Shirts</a></li>
+            <li><a href="../clothing/?category=leatherJackets">Leather Jackets</a></li>
+            <li><a href="../clothing/?category=sweaters">Sweaters</a></li>
+            <li><a href="../accessories/?category=beltsBuckles">Belts &amp; Buckles</a></li>
+            <li><a href="../accessories/?category=cologne">Cologne</a></li>
+            <li><a href="../accessories/?category=glasses">Glasses</a></li>
             <li><a href="../shop/">Explore Complete Catalog &rarr;</a></li>
           </ul>
         </div>
@@ -388,15 +357,6 @@
     </footer>
 
     <script type="module" src="../assets/js/main.js"></script>
-    <script type="module" src="../assets/js/cart.js"></script>
-    <script type="module">
-      import { loadCollection } from '../assets/js/products.js';
-      loadCollection('all', {
-        gridId: 'productGrid',
-        countId: 'productCount',
-        filterFormId: 'collectionFilters',
-        sortSelectId: 'collectionSort'
-      });
-    </script>
+    <script type="module" src="../assets/js/storefront.js"></script>
   </body>
 </html>
