@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HIGH CALIBER BOOTS — Responsive Media Queries & Mobile System
+   HIGH CALIBER BOOTS — Responsive Mobile & Tablet System
    Breakpoints: 375px, 430px, 768px, 1024px, 1440px+
    ========================================================================== */
 
@@ -27,19 +27,77 @@
   }
 }
 
-/* --- Tablets & Smaller Desktops (<= 1024px) --- */
+/* --- Tablets & Mobile Devices (<= 1024px) --- */
 @media (max-width: 1024px) {
   :root {
     --header-height: 72px;
   }
 
   .desktop-nav {
-    display: none;
+    display: none !important;
+  }
+
+  .about-header-link {
+    display: none !important;
+  }
+
+  .site-header {
+    height: auto !important;
+    min-height: 68px !important;
+    border-bottom: 1px solid rgba(199, 164, 119, 0.2) !important;
+  }
+
+  .header-inner {
+    height: 68px !important;
+    min-height: 68px !important;
+    padding: 0 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+  }
+
+  .header-brand {
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .header-brand::before {
+    display: none !important;
+  }
+
+  .header-logo {
+    height: 44px !important;
+    max-width: 185px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5)) !important;
+  }
+
+  .header-utility {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.65rem !important;
+    margin-left: auto !important;
+    z-index: 10 !important;
+  }
+
+  .utility-btn {
+    padding: 0.4rem !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .mobile-toggle-btn {
-    display: inline-flex;
-    color: var(--color-off-white);
+    display: inline-flex !important;
+    color: var(--color-off-white) !important;
   }
 
   .category-grid {
@@ -48,7 +106,7 @@
   }
 
   .category-card {
-    height: 380px;
+    height: 360px;
   }
 
   .brand-story-inner {
@@ -110,84 +168,211 @@
   }
 }
 
-/* --- Mobile Landscape & Tablets (<= 768px) --- */
+/* --- Mobile Devices & Phones (<= 768px) --- */
 @media (max-width: 768px) {
   :root {
     --container-padding: var(--container-padding-mobile);
-    --header-height: var(--header-height-mobile);
+    --header-height: 64px;
   }
 
-  .site-header {
-    border-bottom: 1px solid var(--color-border);
+  /* Top Announcement Marquee Ticker */
+  .announcement-bar {
+    height: 34px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    background-color: #0b0a09 !important;
+    display: flex !important;
+    align-items: center !important;
   }
 
-  .header-brand {
-    top: calc(50% + 30px);
-    transform: translate(-50%, -50%);
+  .announcement-bar .container {
+    padding: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  .announcement-inner {
+    display: inline-flex !important;
+    white-space: nowrap !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    padding-left: 100% !important;
+    animation: mobile-marquee-ticker 22s linear infinite !important;
+    font-size: 0.68rem !important;
+    letter-spacing: 0.14em !important;
+  }
+
+  @keyframes mobile-marquee-ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
 
   .header-logo {
-    height: 72px;
-    max-width: 220px;
+    height: 38px !important;
+    max-width: 160px !important;
   }
 
+  /* Hero Section Mobile Tuning */
   .hero-section {
-    min-height: 80vh;
-    background-position: center;
+    min-height: calc(100vh - 98px) !important;
+    max-height: 650px !important;
+    padding: 2.5rem 0 !important;
   }
 
   .hero-content {
-    padding: 3rem 0;
+    padding: 1.5rem 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-badge-pill {
+    font-size: 0.68rem !important;
+    padding: 0.4rem 0.85rem !important;
   }
 
   .hero-headline {
-    font-size: clamp(2rem, 8vw, 3rem);
+    font-size: clamp(1.75rem, 7.5vw, 2.5rem) !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0.01em !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 2rem !important;
   }
 
   .hero-actions {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.85rem !important;
+    width: 100% !important;
   }
 
   .hero-actions .btn {
-    width: 100%;
+    width: 100% !important;
+    max-width: 340px !important;
   }
 
+  /* Category Grid Pillars */
   .category-section,
   .products-section,
   .exotic-feature-section,
   .brand-story-section,
-  .page-content-section {
-    padding: 4.5rem 0;
+  .page-content-section,
+  .anatomy-section,
+  .boot-finder-section,
+  .hall-of-fame-section {
+    padding: 3.5rem 0 !important;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .category-card {
+    height: 280px !important;
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
   }
 
   .product-card-content {
-    padding: 1rem 0.85rem;
+    padding: 0.85rem 0.75rem !important;
   }
 
   .product-card-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem !important;
+    line-height: 1.3 !important;
   }
 
   .product-price {
-    font-size: 0.95rem;
+    font-size: 0.92rem !important;
   }
 
-  /* Quick add button visible on mobile cards without requiring hover */
   .product-quick-add-btn {
-    position: static;
-    transform: none;
-    border-top: none;
-    border: 1px solid var(--color-border);
-    margin-top: 0.75rem;
-    padding: 0.6rem 0.5rem;
-    border-radius: 1px;
-    background-color: var(--color-bg-elevated);
+    position: static !important;
+    transform: none !important;
+    border: 1px solid var(--color-border) !important;
+    margin-top: 0.65rem !important;
+    padding: 0.55rem 0.5rem !important;
+    border-radius: 1px !important;
+    background-color: var(--color-bg-elevated) !important;
+    font-size: 0.72rem !important;
+  }
+
+  /* Anatomy Explorer Mobile Stack */
+  .anatomy-grid,
+  .anatomy-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .anatomy-viewer-wrap,
+  .anatomy-stage {
+    padding: 1rem !important;
+  }
+
+  .anatomy-detail-card,
+  .anatomy-info-card {
+    padding: 1.5rem !important;
+  }
+
+  .anatomy-hotspot-nav,
+  .anatomy-tabs-row {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 0.5rem !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .anatomy-nav-chip,
+  .anatomy-tab-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Boot Finder Quiz Mobile Stack */
+  .finder-steps-nav {
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 0.5rem !important;
+    gap: 0.5rem !important;
+    justify-content: flex-start !important;
+  }
+
+  .finder-step-tab {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.85rem !important;
+  }
+
+  .finder-options-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .finder-actions-bar {
+    flex-direction: column !important;
+    gap: 0.85rem !important;
+  }
+
+  .finder-actions-bar .btn {
+    width: 100% !important;
+  }
+
+  /* Reviews Grid Mobile Stack */
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .review-card {
+    padding: 1.5rem !important;
   }
 
   .split-editorial-grid {
@@ -195,10 +380,10 @@
   }
 
   .split-editorial-card {
-    min-height: 420px;
+    min-height: 380px;
     border-right: none;
     border-bottom: 1px solid var(--color-border);
-    padding: 3rem var(--container-padding-mobile);
+    padding: 2.5rem var(--container-padding-mobile);
   }
 
   .split-editorial-card:last-child {
@@ -256,33 +441,38 @@
 
 /* --- Compact Mobile Devices (<= 430px) --- */
 @media (max-width: 430px) {
+  .header-logo {
+    height: 34px !important;
+    max-width: 145px !important;
+  }
+
   .category-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .category-card {
-    height: 320px;
-    padding: 1.75rem;
+    height: 250px !important;
+    padding: 1.5rem !important;
   }
 
   .category-card-title {
-    font-size: 1.35rem;
+    font-size: 1.25rem !important;
   }
 
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem !important;
   }
 
   .product-badge {
-    top: 8px;
-    left: 8px;
-    font-size: 0.62rem;
-    padding: 0.2rem 0.45rem;
+    top: 6px;
+    left: 6px;
+    font-size: 0.6rem;
+    padding: 0.18rem 0.4rem;
   }
 
   .cart-drawer {
-    max-width: 100%;
+    max-width: 100% !important;
   }
 
   .cart-item {
@@ -295,33 +485,32 @@
   }
 
   .pdp-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 }
 
 /* --- Ultra Compact Mobile (<= 375px) --- */
 @media (max-width: 375px) {
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .product-card-media {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 3 !important;
   }
 
   .product-card-title {
-    font-size: 1.05rem;
+    font-size: 1rem !important;
   }
 
   .header-logo {
-    height: 62px;
-    max-width: 170px;
+    height: 32px !important;
+    max-width: 135px !important;
   }
 }
 
-/* --- Mobile Sticky Budget & Touch Targets --- */
+/* --- Mobile Touch Targets & Header Safety --- */
 @media (max-width: 768px) {
-  /* Ensure all interactive touch targets meet accessibility minimum of 44px */
   .nav-link,
   .mobile-nav-link,
   .utility-btn,
@@ -334,12 +523,6 @@
     min-height: 44px;
     display: inline-flex;
     align-items: center;
-  }
-
-  /* Cap sticky height on mobile below 15% viewport height */
-  .site-header {
-    height: var(--header-height-mobile);
-    max-height: 12vh;
   }
 }
 
