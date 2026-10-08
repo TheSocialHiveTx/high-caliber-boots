@@ -73,13 +73,18 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--color-bg-primary);
   color: var(--color-off-white);
-  overflow-x: hidden;
 }
 
 /* Tabular figures for numbers */

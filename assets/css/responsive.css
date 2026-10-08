@@ -1,7 +1,32 @@
 /* ==========================================================================
    HIGH CALIBER BOOTS — Responsive Mobile & Tablet System
+   Strict Vertical-Only Scroll Guarantee (Zero Horizontal Overflow)
    Breakpoints: 375px, 430px, 768px, 1024px, 1440px+
    ========================================================================== */
+
+/* --- Global Anti-Horizontal Overflow Protection --- */
+html, body {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+.container,
+main,
+header,
+footer,
+section,
+div,
+nav,
+aside {
+  max-width: 100% !important;
+}
 
 /* --- Large Desktop Displays (1440px+) --- */
 @media (min-width: 1440px) {
@@ -55,6 +80,7 @@
     align-items: center !important;
     justify-content: space-between !important;
     position: relative !important;
+    max-width: 100% !important;
   }
 
   .header-brand {
@@ -144,22 +170,26 @@
   }
 
   .faq-nav-sticky {
-    position: static;
-    flex-direction: row;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
+    position: static !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
   }
 
   .faq-nav-link {
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    white-space: nowrap;
+    border-left: none !important;
+    border-bottom: 2px solid transparent !important;
+    white-space: normal !important;
+    flex: 1 1 calc(50% - 0.4rem) !important;
+    text-align: center !important;
   }
 
   .faq-nav-link:hover,
   .faq-nav-link.is-active {
-    border-left-color: transparent;
-    border-bottom-color: var(--color-warm-tan);
+    border-left-color: transparent !important;
+    border-bottom-color: var(--color-warm-tan) !important;
   }
 
   .footer-top {
@@ -185,36 +215,41 @@
     --header-height: 64px;
   }
 
-  /* Top Announcement Marquee Ticker */
+  /* Announcement Bar Mobile Clean Fit */
   .announcement-bar {
-    height: 34px !important;
+    height: auto !important;
+    min-height: 34px !important;
+    padding: 0.35rem 0.5rem !important;
     overflow: hidden !important;
     position: relative !important;
     background-color: #0b0a09 !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
   }
 
   .announcement-bar .container {
     padding: 0 !important;
     max-width: 100% !important;
     overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 
   .announcement-inner {
-    display: inline-flex !important;
-    white-space: nowrap !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    white-space: normal !important;
     align-items: center !important;
-    gap: 1.5rem !important;
-    padding-left: 100% !important;
-    animation: mobile-marquee-ticker 22s linear infinite !important;
-    font-size: 0.68rem !important;
-    letter-spacing: 0.14em !important;
-  }
-
-  @keyframes mobile-marquee-ticker {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 0.35rem 0.65rem !important;
+    padding-left: 0 !important;
+    animation: none !important;
+    font-size: 0.65rem !important;
+    letter-spacing: 0.12em !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .header-logo {
@@ -270,7 +305,6 @@
   .exotic-feature-section,
   .brand-story-section,
   .page-content-section,
-  .anatomy-section,
   .boot-finder-section,
   .hall-of-fame-section {
     padding: 3.5rem 0 !important;
@@ -314,49 +348,20 @@
     font-size: 0.72rem !important;
   }
 
-  /* Anatomy Explorer Mobile Stack */
-  .anatomy-grid,
-  .anatomy-container {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-
-  .anatomy-viewer-wrap,
-  .anatomy-stage {
-    padding: 1rem !important;
-  }
-
-  .anatomy-detail-card,
-  .anatomy-info-card {
-    padding: 1.5rem !important;
-  }
-
-  .anatomy-hotspot-nav,
-  .anatomy-tabs-row {
-    overflow-x: auto !important;
-    flex-wrap: nowrap !important;
-    padding-bottom: 0.5rem !important;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .anatomy-nav-chip,
-  .anatomy-tab-btn {
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
-  }
-
   /* Boot Finder Quiz Mobile Stack */
   .finder-steps-nav {
-    overflow-x: auto !important;
-    flex-wrap: nowrap !important;
-    padding-bottom: 0.5rem !important;
-    gap: 0.5rem !important;
-    justify-content: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
 
   .finder-step-tab {
-    white-space: nowrap !important;
-    flex-shrink: 0 !important;
+    width: 100% !important;
+    white-space: normal !important;
+    text-align: center !important;
     font-size: 0.75rem !important;
     padding: 0.5rem 0.85rem !important;
   }
@@ -373,6 +378,11 @@
 
   .finder-actions-bar .btn {
     width: 100% !important;
+  }
+
+  #finderResultContent > div {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
   }
 
   /* Reviews Grid Mobile Stack */
@@ -400,6 +410,7 @@
     border-bottom: none;
   }
 
+  /* Collection Controls & Sorting Toolbar Mobile Fit */
   .collection-controls-bar {
     position: sticky !important;
     top: 64px !important;
@@ -407,39 +418,57 @@
     background-color: #0e0d0c !important;
     border-bottom: 1px solid rgba(199, 164, 119, 0.25) !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75) !important;
-    padding: 0.55rem 0 !important;
+    padding: 0.65rem 0 !important;
   }
 
   .controls-inner {
     display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    gap: 0.5rem !important;
-    flex-wrap: nowrap !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  .filters-row {
-    flex: 1 1 auto !important;
-    width: auto !important;
-    overflow-x: auto !important;
-    flex-wrap: nowrap !important;
+  .filters-row,
+  .category-tabs,
+  .showcase-tabs-nav {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
     padding-bottom: 0 !important;
-    -webkit-overflow-scrolling: touch;
+  }
+
+  .showcase-tab,
+  .category-tab-btn {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    white-space: normal !important;
+    padding: 0.5rem 0.65rem !important;
+    font-size: 0.72rem !important;
   }
 
   .filter-select, .sort-select {
-    flex-shrink: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
   }
 
   .collection-stats {
-    flex: 0 0 auto !important;
-    margin-left: auto !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
     gap: 0.5rem !important;
   }
 
   .product-count-display {
-    display: none !important;
+    display: inline-block !important;
+    font-size: 0.75rem !important;
   }
 
   .sort-select {
