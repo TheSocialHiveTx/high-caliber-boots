@@ -28,11 +28,11 @@ export const shopifyConfig = {
    * Matches customer's live collections + configurable placeholders for future ones.
    */
   collections: {
-    boots: "boots",             // Live "Boots" collection (12 products)
+    boots: "",                  // Boots are drafts; keep this collection hidden
     mensBoots: "",              // Configurable sub-filter handle
     womensBoots: "",            // Configurable sub-filter handle
 
-    clothing: "frontpage",      // Live "Women Wear" collection (3 jacket products)
+    clothing: "clothing",       // Live Clothing collection
     tshirts: "",
     leatherJackets: "",
     sweaters: "",
@@ -45,8 +45,8 @@ export const shopifyConfig = {
     cowboyHats: "",
     westernJewelry: "",
 
-    featured: "boots",         // Uses Boots collection for homepage featured section
-    newArrivals: "boots",      // Uses Boots collection for homepage new arrivals
+    featured: "clothing",       // Use published clothing while boots are in draft
+    newArrivals: "clothing",    // Use published clothing while boots are in draft
     promotions: ""             // Derived automatically from compareAtPrice if blank
   },
 
