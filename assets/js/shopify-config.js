@@ -28,7 +28,7 @@ export const shopifyConfig = {
    * Matches customer's live collections + configurable placeholders for future ones.
    */
   collections: {
-    boots: "",                  // Boots are drafts; keep this collection hidden
+    boots: "boots",             // Live Boots collection handle in Shopify
     mensBoots: "",              // Configurable sub-filter handle
     womensBoots: "",            // Configurable sub-filter handle
 
