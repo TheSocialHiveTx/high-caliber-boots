@@ -38,7 +38,7 @@ export const shopifyConfig = {
     sweaters: "",
     womensClothing: "",
 
-    accessories: "",           // Future accessories collection
+    accessories: "accessories",
     beltsBuckles: "",
     cologne: "",
     glasses: "",
