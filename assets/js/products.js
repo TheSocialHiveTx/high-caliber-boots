@@ -86,7 +86,7 @@ export function renderProductCard(product) {
   registry.set(product.handle, product);
 
   const primary = product.images[0];
-  const secondary = product.images[1];
+  const secondary = product.available ? product.images[1] : null;
   const title = escapeHtml(product.title);
   const handle = escapeHtml(product.handle);
   const href = `#product=${encodeURIComponent(product.handle)}`;
